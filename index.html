@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+<!--
+  ============================================================
+  保守メモ (MAINTENANCE NOTES)
+  ------------------------------------------------------------
+  ・本番公開時は下記5箇所を実際の値に差し替えてください：
+    1) <link rel="canonical"> と og:url / twitter:url  … 本番ドメイン
+    2) contact@example.com（2箇所：CONTACTセクション／mailto）
+    3) JSON-LD 内の "url" / "sameAs"                    … 本番ドメイン
+    4) og:image / twitter:image                        … 実写真URL
+    5) 申込フォーム（.app-form）… Formspree等の action URL を追加後、
+       fetch送信に切り替え（現状はダミー送信のみ）
+  ・配色・フォントは :root のCSS変数（TOKENSブロック）で一括管理。
+  ・選手データ／経歴／実績等の文言はHTML内、該当セクションのコメント直下を編集。
+  ・画像はすべて外部URL参照（postimg.cc）。差し替え時はURLのみ変更でOK。
+  最終更新: 2026-07-02
+  ============================================================
+-->
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -6,14 +23,68 @@
 <title>江波戸紘之 | フットサル ゴレイロ・GKコーチ — ボアルース長野【個人レッスン・クリニック受付中】</title>
 <meta name="description" content="江波戸紘之（えばとひろゆき）のオフィシャルサイト。ボアルース長野所属のフットサルゴレイロ（GK）・GKコーチ。個人レッスン（対面・オンライン対応）とゴレイロクリニックを随時受付中。">
 <meta name="keywords" content="江波戸紘之,えばとひろゆき,江波戸フットサル,江波戸GK,ゴレイロレッスン,フットサルGKレッスン,ゴレイロクリニック,フットサル個人レッスン,GKコーチ,ボアルース長野,Fリーグ">
+<meta name="author" content="江波戸紘之">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="format-detection" content="telephone=no">
+<link rel="canonical" href="https://ebato-h-official.pages.dev/">
+
+<!-- OGP -->
+<meta property="og:site_name" content="HIROYUKI EBATO OFFICIAL">
 <meta property="og:title" content="江波戸紘之 | フットサル ゴレイロ・GKコーチ — ボアルース長野">
 <meta property="og:description" content="ボアルース長野所属のフットサルゴレイロ（GK）・GKコーチ、江波戸紘之のオフィシャルサイト。個人レッスン・ゴレイロクリニック受付中。">
 <meta property="og:image" content="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://ebato-h-official.pages.dev/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
 
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="江波戸紘之 | フットサル ゴレイロ・GKコーチ — ボアルース長野">
+<meta name="twitter:description" content="ボアルース長野所属のフットサルゴレイロ（GK）・GKコーチ、江波戸紘之のオフィシャルサイト。">
+<meta name="twitter:image" content="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg">
+
+<!-- Theme / Icons -->
+<meta name="theme-color" content="#080e1c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f2ede3" media="(prefers-color-scheme: light)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080e1c'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23080e1c'/%3E%3Ctext x='50' y='68' font-size='58' font-family='Georgia,serif' font-weight='700' fill='%23c9a84c' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
+
+<!-- Performance: 事前接続・重要画像のプリロード（FEO） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://i.postimg.cc">
+<link rel="preload" as="image" href="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<!-- 構造化データ（SEO / JSON-LD） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "江波戸紘之",
+    "alternateName": "Hiroyuki Ebato",
+    "givenName": "紘之",
+    "familyName": "江波戸",
+    "birthDate": "1989-03-13",
+    "birthPlace": "千葉県",
+    "height": "180",
+    "jobTitle": ["フットサル選手（ゴレイロ）", "GKコーチ"],
+    "affiliation": {
+      "@type": "SportsTeam",
+      "name": "ボアルース長野",
+      "sport": "Futsal"
+    },
+    "url": "https://ebato-h-official.pages.dev/",
+    "image": "https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg",
+    "sameAs": ["https://www.instagram.com/ebt_gore"],
+    "email": "mailto:contact@example.com"
+  }
+}
+</script>
 
 <style>
 /* ============================================
@@ -758,6 +829,8 @@ footer{
 </style>
 </head>
 <body>
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<a href="#top" class="visually-hidden-focusable" style="position:absolute;left:-9999px;top:0;z-index:2000;background:#c9a84c;color:#0a0f1a;padding:12px 20px;font-family:'JetBrains Mono',monospace;font-size:12px;" onfocus="this.style.left='16px';this.style.top='16px';" onblur="this.style.left='-9999px';">本文へスキップ</a>
 
 <!-- ============ HEADER ============ -->
 <header id="siteHeader">
@@ -839,7 +912,7 @@ footer{
     <div class="eyebrow">Player</div>
     <div class="player-grid">
       <div class="player-photo reveal">
-        <img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 選手写真" loading="lazy">
+        <img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 選手写真" width="800" height="1000" loading="lazy" decoding="async">
       </div>
       <div class="player-intro reveal">
         <h2 class="section-title">江波戸 紘之<span class="jp">ゴレイロ、その先も見据えて。</span></h2>
@@ -955,11 +1028,11 @@ footer{
 
     <div class="gallery-viewport">
       <div class="gallery-track" id="galleryTrack">
-        <div class="gallery-item"><img src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg" alt="江波戸紘之 ギャラリー写真1" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 ギャラリー写真2" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://i.postimg.cc/KYfQQ7cN/line-oa-chat-260624-143150.jpg" alt="江波戸紘之 ギャラリー写真3" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://i.postimg.cc/W48SSmp5/line-oa-chat-260624-143152.jpg" alt="江波戸紘之 ギャラリー写真4" loading="lazy"></div>
-        <div class="gallery-item"><img src="https://i.postimg.cc/q7wQQcBj/line-oa-chat-260624-143153.jpg" alt="江波戸紘之 ギャラリー写真5" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg" alt="江波戸紘之 ギャラリー写真1" width="900" height="1200" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 ギャラリー写真2" width="900" height="1200" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/KYfQQ7cN/line-oa-chat-260624-143150.jpg" alt="江波戸紘之 ギャラリー写真3" width="900" height="1200" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/W48SSmp5/line-oa-chat-260624-143152.jpg" alt="江波戸紘之 ギャラリー写真4" width="900" height="1200" loading="lazy" decoding="async"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/q7wQQcBj/line-oa-chat-260624-143153.jpg" alt="江波戸紘之 ギャラリー写真5" width="900" height="1200" loading="lazy" decoding="async"></div>
         <div class="gallery-item coming"><span class="mono">MORE<br>COMING</span></div>
       </div>
     </div>
@@ -1205,7 +1278,9 @@ function updateScrollspy(){
     if (sec && pos >= sec.offsetTop) current = sec.id;
   });
   navLinks.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    const isActive = a.getAttribute('href') === '#' + current;
+    a.classList.toggle('active', isActive);
+    if (isActive) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
   });
 }
 window.addEventListener('scroll', updateScrollspy, { passive:true });

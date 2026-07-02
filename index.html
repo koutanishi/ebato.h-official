@@ -135,77 +135,73 @@ nav{display:flex;align-items:center;justify-content:space-between;height:var(--n
 }
 .mobile-nav-ig:hover{background:#c9a84c;color:#080e1c;}
 
-/* ===== HERO ===== */
+/* ===== HERO =====
+   構造：hero(z-index:0でstacking context確立)
+     ├ hero-photo  z-index:1  写真
+     ├ hero-dark   z-index:2  暗いグラデーション
+     └ hero-body   z-index:3  テキスト（必ず最前面）
+   ======================================== */
 .hero{
   position:relative;
-  width:100%;
+  z-index:0;          /* z-index:0+position:relativeでstacking contextを確立 */
   height:100dvh;
   min-height:560px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;   /* 中央配置：開いた瞬間に見える */
-  padding-top:var(--nav-h);
-  overflow:hidden;
   background:#0a1428;
 }
-/* 写真：下部（選手の体）を中心に表示。上は切り捨てOK */
+/* 写真：最背面 */
 .hero-photo{
-  position:absolute;inset:0;
+  position:absolute;top:0;left:0;right:0;bottom:0;
   width:100%;height:100%;
   object-fit:cover;
-  object-position:center 30%; /* 上を切って中〜下部を表示 */
-  filter:brightness(0.45) contrast(1.1);
-  z-index:0;
+  object-position:center 25%;
+  filter:brightness(0.6);
+  z-index:1;
+  display:block;
 }
-/* オーバーレイ：下に向かって暗くする（文字読みやすさ確保）*/
-.hero::before{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(
-    to bottom,
-    rgba(8,14,28,0.25) 0%,
-    rgba(8,14,28,0.45) 50%,
-    rgba(8,14,28,0.82) 100%
-  );
+/* グラデーションオーバーレイ */
+.hero-dark{
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  z-index:2;
+  background:
+    linear-gradient(to right,rgba(8,14,28,0.85) 0%,rgba(8,14,28,0.3) 55%,transparent 82%),
+    linear-gradient(to bottom,transparent 20%,rgba(8,14,28,0.6) 100%);
 }
-.hero::after{
-  content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(
-    to right,
-    rgba(8,14,28,0.75) 0%,
-    rgba(8,14,28,0.2) 55%,
-    transparent 80%
-  );
+/* テキストエリア：最前面・絶対配置でヘッダー下から画面底まで */
+.hero-body{
+  position:absolute;
+  top:var(--nav-h);left:0;right:0;bottom:0;
+  z-index:3;
+  display:flex;
+  align-items:center;
 }
-.hero-content{
-  position:relative;z-index:2;
-  padding:0 0 24px;
-}
+/* ヒーロー内は全色直値（CSS変数のライトモード汚染を完全回避） */
 .hero-eyebrow{
   font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;
-  color:var(--gold);display:flex;align-items:center;gap:10px;margin-bottom:18px;
+  color:#c9a84c;display:flex;align-items:center;gap:10px;margin-bottom:18px;
 }
-.hero-eyebrow::before{content:"";width:28px;height:1px;background:var(--gold);}
+.hero-eyebrow::before{content:"";width:28px;height:1px;background:#c9a84c;flex-shrink:0;}
 .hero h1{
   font-family:'Anton',sans-serif;
-  font-size:clamp(3.2rem,9vw,6.8rem);
-  line-height:0.94;letter-spacing:0.01em;color:#f4f2ed;
+  font-size:clamp(3rem,8vw,6.4rem);
+  line-height:0.94;letter-spacing:0.01em;
+  color:#f4f2ed;
 }
 .hero h1 .en{
-  display:block;font-size:clamp(1.3rem,3.2vw,2.4rem);
-  letter-spacing:0.12em;color:var(--gold);margin-top:10px;
+  display:block;font-size:clamp(1.2rem,3vw,2.2rem);
+  letter-spacing:0.12em;color:#c9a84c;margin-top:10px;
 }
-.hero-rule{width:48px;height:2px;background:var(--gold);margin:24px 0;}
+.hero-rule{width:48px;height:2px;background:#c9a84c;margin:22px 0;}
 .hero-stats{
-  display:flex;flex-wrap:wrap;gap:12px 28px;
-  font-family:'JetBrains Mono',monospace;font-size:0.72rem;
-  color:rgba(255,255,255,0.55);margin-bottom:28px;
+  display:flex;flex-wrap:wrap;gap:10px 24px;
+  font-family:'JetBrains Mono',monospace;font-size:0.7rem;
+  color:rgba(255,255,255,0.55);margin-bottom:26px;
 }
-.hero-stats b{color:#f4f2ed;display:block;font-size:0.82rem;margin-top:2px;}
-.hero-stats .g{color:var(--gold);}
+.hero-stats b{color:#f4f2ed;display:block;font-size:0.8rem;margin-top:2px;}
+.hero-stats .g{color:#c9a84c;}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
 @media(max-width:600px){
-  .hero-content{padding:0 0 16px;}
-  .hero h1{font-size:clamp(2.8rem,12vw,4rem);}
+  .hero h1{font-size:clamp(2.6rem,11vw,3.8rem);}
+  .hero-stats{gap:8px 18px;}
 }
 
 /* ===== BUTTONS ===== */
@@ -557,10 +553,15 @@ footer{background:#080e1c;border-top:1px solid rgba(255,255,255,0.06);padding:40
 <!-- HERO -->
 <section id="top" style="border-top:none;padding:0;" aria-label="ヒーロー">
   <div class="hero">
+    <!-- z-index:1 写真 -->
     <img class="hero-photo"
          src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg"
          alt="江波戸紘之選手" width="1200" height="1600" fetchpriority="high">
-    <div class="hero-content wrap">
+    <!-- z-index:2 グラデーションオーバーレイ -->
+    <div class="hero-dark" aria-hidden="true"></div>
+    <!-- z-index:3 テキスト（必ず最前面） -->
+    <div class="hero-body">
+    <div class="wrap" style="width:100%;">
       <p class="hero-eyebrow">GOLEIRO / GK COACH — BOALUZ NAGANO 2026–27</p>
       <h1>江波戸 紘之<span class="en">HIROYUKI EBATO</span></h1>
       <div class="hero-rule"></div>
@@ -574,8 +575,9 @@ footer{background:#080e1c;border-top:1px solid rgba(255,255,255,0.06);padding:40
         <a class="btn" href="#support">レッスン・クリニック申込 →</a>
         <a class="btn ghost" href="#contact">お問い合わせ</a>
       </div>
-    </div>
-  </div>
+    </div><!-- /.wrap -->
+    </div><!-- /.hero-body -->
+  </div><!-- /.hero -->
 </section>
 
 <!-- ACHIEVEMENT -->

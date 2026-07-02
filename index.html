@@ -144,7 +144,7 @@ nav{display:flex;align-items:center;justify-content:space-between;height:var(--n
 .hero{
   position:relative;
   z-index:0;          /* z-index:0+position:relativeでstacking contextを確立 */
-  height:100dvh;
+  height:100svh;       /* dvh→svh：スクロール中のアドレスバー伸縮で再計算されず、黒背景のちらつきを防止 */
   min-height:560px;
   background:#0a1428;
 }

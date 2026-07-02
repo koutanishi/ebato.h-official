@@ -3,967 +3,1301 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="dark light">
 <title>江波戸紘之 | フットサル ゴレイロ・GKコーチ — ボアルース長野【個人レッスン・クリニック受付中】</title>
 <meta name="description" content="江波戸紘之（えばとひろゆき）のオフィシャルサイト。ボアルース長野所属のフットサルゴレイロ（GK）・GKコーチ。個人レッスン（対面・オンライン対応）とゴレイロクリニックを随時受付中。">
 <meta name="keywords" content="江波戸紘之,えばとひろゆき,江波戸フットサル,江波戸GK,ゴレイロレッスン,フットサルGKレッスン,ゴレイロクリニック,フットサル個人レッスン,GKコーチ,ボアルース長野,Fリーグ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="江波戸紘之 | フットサルゴレイロ・GKコーチ">
-<meta property="og:description" content="ボアルース長野所属。個人レッスン・ゴレイロクリニック受付中。">
+<meta property="og:title" content="江波戸紘之 | フットサル ゴレイロ・GKコーチ — ボアルース長野">
+<meta property="og:description" content="ボアルース長野所属のフットサルゴレイロ（GK）・GKコーチ、江波戸紘之のオフィシャルサイト。個人レッスン・ゴレイロクリニック受付中。">
 <meta property="og:image" content="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg">
+<meta property="og:type" content="website">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
 <style>
-/* ===== CSS変数 ===== */
-:root {
-  color-scheme: dark light;
-  --navy:  #080e1c;
-  --navy2: #0d1528;
-  --navy3: #131d35;
-  --gold:  #c9a84c;
-  --gold2: #e8c97a;
-  --bg:    #080e1c;
-  --bg2:   #0d1528;
-  --bg3:   #131d35;
-  --text:  #f4f2ed;
-  --sub:   #b8c4d4;
-  --gray:  #7a8aa8;
-  --bdr:   rgba(255,255,255,0.08);
-  --bdrg:  rgba(201,168,76,0.28);
-  --nav-h: 64px;
-  --maxw:  1160px;
+/* ============================================
+   TOKENS
+============================================ */
+:root{
+  --bg:#080e1c;
+  --bg-card:#0d1528;
+  --bg-card-deep:#131d35;
+  --gold:#c9a84c;
+  --gold-light:#e8c97a;
+  --text-main:#f4f2ed;
+  --text-sub:#b8c4d4;
+  --text-gray:#7a8aa8;
+  --border:rgba(255,255,255,0.08);
+  --border-gold:rgba(201,168,76,0.28);
+  --overlay:rgba(8,14,28,0.72);
+  color-scheme: dark;
 }
-@media(prefers-color-scheme:light){
-  :root{
-    --gold:#9e7c22; --gold2:#b8962c;
-    --bg:#f2ede3; --bg2:#e8e2d6; --bg3:#ddd7c9;
-    --text:#0b1325; --sub:#2d4060; --gray:#4a5a72;
-    --bdr:rgba(0,0,0,0.09); --bdrg:rgba(120,90,20,0.3);
-  }
+:root[data-theme="light"]{
+  --bg:#f2ede3;
+  --bg-card:#ffffff;
+  --bg-card-deep:#e9e2d2;
+  --gold:#9e7c22;
+  --gold-light:#8a6a1a;
+  --text-main:#171410;
+  --text-sub:#463f33;
+  --text-gray:#7a7061;
+  --border:rgba(23,20,16,0.10);
+  --border-gold:rgba(158,124,34,0.35);
+  --overlay:rgba(242,237,227,0.82);
+  color-scheme: light;
 }
 
-/* ===== RESET ===== */
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;background:var(--bg);color:var(--text);}
-body{background:var(--bg);color:var(--text);font-family:'Zen Kaku Gothic New',sans-serif;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-body.nav-open{overflow:hidden;}
-::selection{background:var(--gold);color:#fff;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--text-main);
+  font-family:'Zen Kaku Gothic New', sans-serif;
+  line-height:1.75;
+  overflow-x:hidden;
+  transition:background .4s ease, color .4s ease;
+}
+img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
-img{display:block;max-width:100%;}
-button{font-family:inherit;cursor:pointer;}
-:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
-@media(max-width:600px){.wrap{padding:0 20px;}}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+input,select,textarea{font-family:inherit;}
 
-/* ===== HEADER ===== */
-header{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  height:var(--nav-h);
-  background:rgba(8,14,28,0.96);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(201,168,76,0.18);
-  color:#f4f2ed;
-}
-nav{display:flex;align-items:center;justify-content:space-between;height:var(--nav-h);}
+.mono{font-family:'JetBrains Mono', monospace;}
+.display{font-family:'Anton', sans-serif; letter-spacing:.01em;}
 
-/* ロゴ：テキストのみ（HEマーク廃止） */
-.logo{
-  display:flex;flex-direction:column;line-height:1.1;flex-shrink:0;
-}
-.logo-en{font-family:'Anton',sans-serif;font-size:1.05rem;letter-spacing:0.06em;color:#f4f2ed;}
-.logo-sub{font-family:'JetBrains Mono',monospace;font-size:0.5rem;letter-spacing:0.18em;color:var(--gold);opacity:.8;}
-
-.navlinks{display:flex;gap:28px;list-style:none;align-items:center;}
-.navlinks a{
-  font-family:'JetBrains Mono',monospace;font-size:0.68rem;letter-spacing:0.06em;
-  color:#7a8aa8;position:relative;padding-bottom:3px;transition:color .2s;white-space:nowrap;
-}
-.navlinks a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .25s;}
-.navlinks a:hover,.navlinks a[aria-current]{color:#f4f2ed;}
-.navlinks a:hover::after,.navlinks a[aria-current]::after{width:100%;}
-.nav-ig{
-  font-family:'JetBrains Mono',monospace;font-size:0.68rem;
-  border:1px solid var(--gold);color:var(--gold);padding:7px 16px;flex-shrink:0;
-  transition:background .2s,color .2s;
-}
-.nav-ig:hover{background:var(--gold);color:#080e1c;}
-.burger{
-  display:none;flex-direction:column;justify-content:center;align-items:center;
-  gap:5px;width:44px;height:44px;background:none;border:none;flex-shrink:0;
-}
-.burger span{display:block;width:22px;height:2px;background:var(--gold);border-radius:1px;transition:transform .28s,opacity .2s;transform-origin:center;}
-.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.burger[aria-expanded="true"] span:nth-child(2){opacity:0;transform:scaleX(0);}
-.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-
-/* ===== モバイルナビ（dialog） ===== */
-#mobile-nav{
-  border:none;padding:0;margin:0;
-  width:100dvw;height:100dvh;max-width:100dvw;max-height:100dvh;
-  background:#080e1c;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  position:relative;
-  opacity:0;transition:opacity .22s ease;
-}
-#mobile-nav[open]{opacity:1;}
-#mobile-nav::backdrop{background:rgba(8,14,28,0.97);}
-#mobile-nav-close{
-  position:absolute;top:20px;right:20px;
-  background:none;border:none;color:#f4f2ed;font-size:1.5rem;
-  padding:10px;opacity:.65;font-family:'JetBrains Mono',monospace;
-  transition:opacity .15s,color .15s;
-}
-#mobile-nav-close:hover{opacity:1;color:#c9a84c;}
-#mobile-nav nav{width:100%;text-align:center;}
-#mobile-nav ul{list-style:none;}
-#mobile-nav li{border-bottom:1px solid rgba(255,255,255,0.07);}
-#mobile-nav li:first-child{border-top:1px solid rgba(255,255,255,0.07);}
-#mobile-nav nav a{
-  display:flex;align-items:center;justify-content:center;gap:12px;
-  padding:20px 32px;
-  font-family:'Anton',sans-serif;font-size:1.5rem;letter-spacing:0.06em;
-  color:#f4f2ed;transition:color .15s,background .15s;
-}
-#mobile-nav nav a span{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#c9a84c;letter-spacing:0.1em;}
-#mobile-nav nav a:hover{color:#c9a84c;background:rgba(201,168,76,0.06);}
-.mobile-nav-ig{
-  display:inline-block;margin-top:28px;
-  font-family:'JetBrains Mono',monospace;font-size:0.74rem;letter-spacing:0.06em;
-  color:#c9a84c;border:1px solid rgba(201,168,76,0.4);padding:12px 28px;
-  transition:background .2s,color .2s;
-}
-.mobile-nav-ig:hover{background:#c9a84c;color:#080e1c;}
-
-/* ===== HERO =====
-   構造：hero(z-index:0でstacking context確立)
-     ├ hero-photo  z-index:1  写真
-     ├ hero-dark   z-index:2  暗いグラデーション
-     └ hero-body   z-index:3  テキスト（必ず最前面）
-   ======================================== */
-.hero{
-  position:relative;
-  z-index:0;          /* z-index:0+position:relativeでstacking contextを確立 */
-  height:100svh;       /* dvh→svh：スクロール中のアドレスバー伸縮で再計算されず、黒背景のちらつきを防止 */
-  min-height:560px;
-  background:#0a1428;
-}
-/* 写真：最背面 */
-.hero-photo{
-  position:absolute;top:0;left:0;right:0;bottom:0;
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center 25%;
-  filter:brightness(0.6);
-  z-index:1;
-  display:block;
-}
-/* グラデーションオーバーレイ */
-.hero-dark{
-  position:absolute;top:0;left:0;right:0;bottom:0;
-  z-index:2;
-  background:
-    linear-gradient(to right,rgba(8,14,28,0.85) 0%,rgba(8,14,28,0.3) 55%,transparent 82%),
-    linear-gradient(to bottom,transparent 20%,rgba(8,14,28,0.6) 100%);
-}
-/* テキストエリア：最前面・絶対配置でヘッダー下から画面底まで */
-.hero-body{
-  position:absolute;
-  top:var(--nav-h);left:0;right:0;bottom:0;
-  z-index:3;
-  display:flex;
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
+.section{padding:120px 0;position:relative;}
+.eyebrow{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  color:var(--gold);
+  display:inline-flex;
   align-items:center;
+  gap:10px;
+  margin-bottom:20px;
 }
-/* ヒーロー内は全色直値（CSS変数のライトモード汚染を完全回避） */
-.hero-eyebrow{
-  font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;
-  color:#c9a84c;display:flex;align-items:center;gap:10px;margin-bottom:18px;
+.eyebrow::before{
+  content:'';
+  width:24px;height:1px;
+  background:var(--gold);
+  display:inline-block;
 }
-.hero-eyebrow::before{content:"";width:28px;height:1px;background:#c9a84c;flex-shrink:0;}
-.hero h1{
-  font-family:'Anton',sans-serif;
-  font-size:clamp(3rem,8vw,6.4rem);
-  line-height:0.94;letter-spacing:0.01em;
-  color:#f4f2ed;
+.section-title{
+  font-family:'Anton', sans-serif;
+  font-size:clamp(32px,5vw,56px);
+  line-height:1.05;
+  letter-spacing:.01em;
+  margin-bottom:16px;
 }
-.hero h1 .en{
-  display:block;font-size:clamp(1.2rem,3vw,2.2rem);
-  letter-spacing:0.12em;color:#c9a84c;margin-top:10px;
-}
-.hero-rule{width:48px;height:2px;background:#c9a84c;margin:22px 0;}
-.hero-stats{
-  display:flex;flex-wrap:wrap;gap:10px 24px;
-  font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-  color:rgba(255,255,255,0.55);margin-bottom:26px;
-}
-.hero-stats b{color:#f4f2ed;display:block;font-size:0.8rem;margin-top:2px;}
-.hero-stats .g{color:#c9a84c;}
-.hero-cta{display:flex;gap:12px;flex-wrap:wrap;}
-@media(max-width:600px){
-  .hero h1{font-size:clamp(2.6rem,11vw,3.8rem);}
-  .hero-stats{gap:8px 18px;}
-}
-
-/* ===== BUTTONS ===== */
-.btn{
-  font-family:'JetBrains Mono',monospace;font-size:0.78rem;letter-spacing:0.04em;font-weight:700;
-  background:var(--gold);color:#080e1c;padding:13px 26px;
-  display:inline-flex;align-items:center;gap:8px;border:none;transition:filter .2s;
-}
-.btn:hover{filter:brightness(1.15);}
-.btn.ghost{background:transparent;border:1.5px solid rgba(255,255,255,0.35);color:#f4f2ed;}
-.btn.ghost:hover{border-color:var(--gold);color:var(--gold);}
-
-/* ===== SECTIONS ===== */
-section{padding:96px 0;border-top:1px solid var(--bdr);}
-.sec-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;color:var(--gold);margin-bottom:8px;}
-.sec-title{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:0.01em;color:var(--text);margin-bottom:40px;}
-.sec-title em{color:var(--gold);font-style:normal;}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:12px;}
-.sec-head-text .sec-title{margin-bottom:0;}
-
-/* ===== ACHIEVEMENT ===== */
-.ach-section{background:#080e1c;border:none;padding:60px 0;}
-.ach-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,168,76,0.12);}
-.ach-item{background:#080e1c;padding:36px 24px;text-align:center;}
-.ach-num{font-family:'Anton',sans-serif;font-size:clamp(2.8rem,5.5vw,4.2rem);color:var(--gold);}
-.ach-unit{font-family:'JetBrains Mono',monospace;font-size:0.9rem;color:var(--gold);}
-.ach-lbl{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;color:#7a8aa8;margin-top:6px;}
-.ach-ja{font-size:0.84rem;color:#b8c4d4;margin-top:4px;}
-@media(max-width:600px){.ach-grid{grid-template-columns:1fr;}}
-
-/* ===== PLAYER（宣材写真レイアウト） ===== */
-.player-grid{
-  display:grid;
-  grid-template-columns:minmax(0,0.9fr) minmax(0,1.1fr);
-  gap:64px;align-items:stretch;
-}
-@media(max-width:900px){.player-grid{grid-template-columns:1fr;gap:40px;}}
-
-/* 左：大きな宣材写真 */
-.player-photo-wrap{
-  position:relative;
-  /* アスペクト比固定 */
-  aspect-ratio:3/4;
-  overflow:hidden;
-  background:var(--bg2);
-}
-.player-photo-wrap img{
-  width:100%;height:100%;object-fit:cover;object-position:top center;
+.section-title .jp{
+  font-family:'Zen Kaku Gothic New', sans-serif;
+  font-weight:900;
   display:block;
-  transition:transform .6s ease;
+  font-size:.55em;
+  color:var(--text-sub);
+  margin-top:8px;
+  letter-spacing:.05em;
 }
-.player-photo-wrap:hover img{transform:scale(1.03);}
-/* ゴールドラインのアクセント */
-.player-photo-wrap::after{
-  content:"";position:absolute;left:0;bottom:0;
-  width:3px;height:60%;
-  background:linear-gradient(to top,var(--gold),transparent);
+.gold{color:var(--gold);}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 30px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  border-radius:2px;
+  transition:all .25s ease;
+  white-space:nowrap;
 }
-@media(max-width:900px){
-  .player-photo-wrap{aspect-ratio:4/3;max-height:380px;}
+.btn-primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-light));
+  color:#0a0f1a;
+  font-weight:700;
 }
+.btn-primary:hover{filter:brightness(1.1);transform:translateY(-2px);}
+.btn-outline{
+  border:1px solid var(--border-gold);
+  color:var(--text-main);
+}
+.btn-outline:hover{background:rgba(201,168,76,0.08);border-color:var(--gold);}
 
-/* 右：テキスト */
-.player-info{display:flex;flex-direction:column;gap:24px;}
-.player-text p{color:var(--sub);font-size:0.96rem;line-height:1.85;}
-.player-text p+p{margin-top:14px;}
-
-/* データカード */
-.data-card{background:var(--bg2);border:1px solid var(--bdrg);padding:20px;}
-.data-card-head{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:0.14em;color:var(--gold);opacity:.7;margin-bottom:12px;}
-.data-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--bdr);font-family:'JetBrains Mono',monospace;font-size:0.78rem;}
-.data-row:last-child{border-bottom:none;}
-.data-row dt{color:var(--gray);flex-shrink:0;}
-.data-row dd{color:var(--text);text-align:right;}
-.data-row dd.g{color:var(--gold);font-weight:700;}
-
-/* ===== CAREER タイムライン ===== */
-.timeline{position:relative;padding-left:0;}
-.tl-line{
-  position:absolute;left:88px;top:8px;bottom:8px;
-  width:1px;background:linear-gradient(to bottom,var(--gold),rgba(201,168,76,0.1));
+/* ============================================
+   HEADER
+============================================ */
+header{
+  position:fixed;top:0;left:0;right:0;
+  z-index:1000;
+  padding:18px 0;
+  transition:background .3s ease, padding .3s ease, border-color .3s ease;
+  border-bottom:1px solid transparent;
 }
-@media(max-width:600px){.tl-line{left:56px;}}
-.tl-item{
-  display:grid;grid-template-columns:88px 1fr;
-  gap:0 32px;align-items:start;
-  padding:0 0 32px;position:relative;
+header.scrolled{
+  background:var(--overlay);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:12px 0;
+  border-bottom-color:var(--border);
 }
-@media(max-width:600px){.tl-item{grid-template-columns:56px 1fr;gap:0 20px;padding-bottom:24px;}}
-.tl-item:last-child{padding-bottom:0;}
-.tl-left{text-align:right;padding-top:4px;}
-.tl-year{
-  font-family:'JetBrains Mono',monospace;font-size:0.62rem;
-  color:var(--gold);opacity:.75;letter-spacing:0.04em;line-height:1.2;
+.header-inner{display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;flex-direction:column;line-height:1;}
+.logo .name{
+  font-family:'Anton', sans-serif;
+  font-size:20px;
+  letter-spacing:.02em;
 }
-.tl-right{
+.logo .sub{
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.32em;
+  color:var(--gold);
+  margin-top:4px;
+}
+nav.main-nav{display:flex;align-items:center;gap:36px;}
+nav.main-nav .navlinks{display:flex;gap:32px;}
+nav.main-nav a{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--text-sub);
   position:relative;
-  padding:16px 20px;
-  background:var(--bg2);border:1px solid var(--bdr);
-  transition:border-color .2s;
+  padding-bottom:4px;
+  transition:color .2s ease;
 }
-.tl-right::before{
-  content:"";position:absolute;left:-32px;top:18px;
-  width:9px;height:9px;border-radius:50%;
-  border:2px solid var(--gold);background:var(--bg);
+nav.main-nav a::after{
+  content:'';
+  position:absolute;left:0;bottom:0;
+  width:0;height:1px;
+  background:var(--gold);
+  transition:width .25s ease;
 }
-@media(max-width:600px){.tl-right::before{left:-20px;width:7px;height:7px;top:19px;}}
-.tl-item:hover .tl-right{border-color:var(--bdrg);}
-.tl-team{font-size:1rem;font-weight:700;color:var(--text);line-height:1.3;}
-.tl-tag{
-  display:inline-block;margin-top:6px;
-  font-family:'JetBrains Mono',monospace;font-size:0.58rem;
-  color:var(--gray);letter-spacing:0.06em;border:1px solid var(--bdr);padding:2px 8px;
+nav.main-nav a:hover,nav.main-nav a.active{color:var(--text-main);}
+nav.main-nav a.active::after{width:100%;}
+.header-right{display:flex;align-items:center;gap:16px;}
+.ig-pill{
+  display:flex;align-items:center;gap:8px;
+  padding:9px 16px;
+  border:1px solid var(--border-gold);
+  border-radius:100px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  color:var(--gold-light);
+  transition:all .2s ease;
 }
-/* 現在所属のスタイル */
-.tl-item.current .tl-right{
-  background:linear-gradient(135deg,var(--bg3),var(--bg2));
-  border-color:rgba(201,168,76,0.5);
-}
-.tl-item.current .tl-right::before{background:var(--gold);}
-.tl-item.current .tl-team{color:var(--gold2);font-size:1.05rem;}
-.tl-item.current .tl-tag{border-color:var(--gold);color:var(--gold);}
-.tl-item.current .tl-year{opacity:1;font-weight:700;}
-
-/* ===== GALLERY スライダー ===== */
-.slider-wrap{position:relative;overflow:hidden;}
-.slider-track{
-  display:flex;gap:16px;
-  transition:transform .4s cubic-bezier(.25,.1,.25,1);
-  will-change:transform;
-}
-.slide{
-  flex:0 0 calc(33.333% - 11px);
-  aspect-ratio:4/5;overflow:hidden;
-  border:1px solid var(--bdrg);background:var(--bg2);
+.ig-pill:hover{background:rgba(201,168,76,0.1);}
+.theme-toggle{
+  width:36px;height:36px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;
   flex-shrink:0;
 }
-.slide img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:transform .4s;}
-.slide:hover img{transform:scale(1.04);}
-.slide-ph{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gray);}
-@media(max-width:860px){
-  .slide{flex:0 0 calc(50% - 8px);}
+.hamburger{
+  display:none;
+  width:36px;height:36px;
+  flex-direction:column;
+  justify-content:center;
+  gap:5px;
+  flex-shrink:0;
 }
-@media(max-width:500px){
-  .slide{flex:0 0 calc(100% - 0px);}
-  .slider-track{gap:0;}
+.hamburger span{width:100%;height:1.5px;background:var(--text-main);transition:all .3s ease;}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
+
+.mobile-menu{
+  position:fixed;inset:0;
+  background:var(--bg);
+  z-index:999;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:36px;
+  opacity:0;visibility:hidden;
+  transform:translateY(-12px);
+  transition:all .35s ease;
 }
-/* ナビボタン */
-.slider-nav{display:flex;align-items:center;justify-content:space-between;margin-top:20px;}
-.slider-btn{
-  background:none;border:1px solid var(--bdrg);color:var(--gold);
-  width:44px;height:44px;font-size:1.3rem;
+.mobile-menu.open{opacity:1;visibility:visible;transform:translateY(0);}
+.mobile-menu a{font-family:'Anton', sans-serif;font-size:32px;letter-spacing:.02em;}
+
+/* ============================================
+   HERO
+============================================ */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:flex-end;
+  position:relative;
+  padding-bottom:80px;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg') center 20%/cover no-repeat;
+  z-index:0;
+}
+.hero-bg::after{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, rgba(8,14,28,0.35) 0%, rgba(8,14,28,0.55) 45%, var(--bg) 92%),
+    linear-gradient(90deg, rgba(8,14,28,0.75) 0%, rgba(8,14,28,0.15) 55%);
+}
+:root[data-theme="light"] .hero-bg::after{
+  background:
+    linear-gradient(180deg, rgba(242,237,227,0.25) 0%, rgba(242,237,227,0.5) 45%, var(--bg) 92%),
+    linear-gradient(90deg, rgba(20,16,10,0.55) 0%, rgba(20,16,10,0.05) 55%);
+}
+.hero-content{position:relative;z-index:1;width:100%;}
+.hero-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.2em;
+  color:var(--gold-light);
+  background:rgba(8,14,28,0.5);
+  border:1px solid var(--border-gold);
+  display:inline-block;
+  padding:8px 16px;
+  margin-bottom:28px;
+  backdrop-filter:blur(6px);
+}
+.hero-title{
+  font-family:'Anton', sans-serif;
+  font-size:clamp(52px,10vw,128px);
+  line-height:.92;
+  letter-spacing:.01em;
+  color:var(--text-main);
+  text-shadow:0 4px 40px rgba(0,0,0,0.4);
+}
+.hero-title .en{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:clamp(14px,2vw,20px);
+  font-weight:700;
+  letter-spacing:.28em;
+  color:var(--gold-light);
+  margin-top:18px;
+}
+.hero-status{
+  display:grid;
+  grid-template-columns:repeat(4,auto);
+  gap:0;
+  margin:44px 0 40px;
+  border-top:1px solid var(--border);
+  max-width:640px;
+}
+.hero-status div{
+  padding:16px 20px 0 0;
+  border-right:1px solid var(--border);
+}
+.hero-status div:last-child{border-right:none;}
+.hero-status .k{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.14em;
+  color:var(--text-gray);
+  text-transform:uppercase;
+  margin-bottom:6px;
+}
+.hero-status .v{font-size:14px;font-weight:700;color:var(--text-main);}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;}
+.scroll-cue{
+  position:absolute;right:24px;bottom:-10px;
+  writing-mode:vertical-rl;
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.2em;
+  color:var(--text-gray);
+  display:flex;align-items:center;gap:10px;
+  z-index:1;
+}
+.scroll-cue::after{content:'';width:1px;height:44px;background:var(--text-gray);}
+
+/* ============================================
+   ACHIEVEMENTS
+============================================ */
+.achievements{
+  padding:64px 0;
+  border-bottom:1px solid var(--border);
+}
+.ach-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+}
+.ach-item{
+  padding:0 32px;
+  border-right:1px solid var(--border);
+  text-align:left;
+}
+.ach-item:last-child{border-right:none;}
+.ach-num{
+  font-family:'Anton', sans-serif;
+  font-size:clamp(36px,5vw,64px);
+  color:var(--gold);
+  line-height:1;
+}
+.ach-label{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.12em;
+  color:var(--text-sub);
+  margin-top:10px;
+  text-transform:uppercase;
+}
+
+/* ============================================
+   PLAYER SECTION
+============================================ */
+.player-grid{
+  display:grid;
+  grid-template-columns:0.85fr 1.15fr;
+  gap:64px;
+  align-items:start;
+}
+.player-photo{
+  position:relative;
+  border:1px solid var(--border-gold);
+}
+.player-photo img{width:100%;filter:grayscale(15%);}
+.player-photo::before{
+  content:'';
+  position:absolute;top:-10px;left:-10px;
+  width:60px;height:60px;
+  border-top:2px solid var(--gold);
+  border-left:2px solid var(--gold);
+}
+.player-photo::after{
+  content:'';
+  position:absolute;bottom:-10px;right:-10px;
+  width:60px;height:60px;
+  border-bottom:2px solid var(--gold);
+  border-right:2px solid var(--gold);
+}
+.player-intro p{color:var(--text-sub);margin-bottom:20px;font-size:15.5px;}
+.data-table{
+  margin-top:36px;
+  border-top:1px solid var(--border);
+}
+.data-table .row{
+  display:grid;
+  grid-template-columns:140px 1fr;
+  border-bottom:1px solid var(--border);
+  padding:14px 0;
+}
+.data-table .row.highlight .v{color:var(--gold-light);font-weight:700;}
+.data-table .k{
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.1em;
+  color:var(--text-gray);
+}
+.data-table .v{font-size:14.5px;font-weight:500;}
+
+/* ============================================
+   MESSAGE
+============================================ */
+.message-section{
+  background:var(--bg-card);
+  padding:110px 0;
+  position:relative;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+.message-mark{
+  font-family:'Anton', sans-serif;
+  font-size:180px;
+  color:var(--border-gold);
+  position:absolute;
+  top:20px;left:24px;
+  line-height:1;
+  user-select:none;
+  z-index:0;
+}
+.message-inner{position:relative;z-index:1;max-width:820px;}
+.message-title{
+  font-family:'Anton', sans-serif;
+  font-size:clamp(26px,4vw,42px);
+  line-height:1.3;
+  margin-bottom:32px;
+}
+.message-body{
+  font-size:18px;
+  color:var(--text-sub);
+  line-height:2;
+}
+.message-cite{
+  margin-top:28px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  color:var(--gold);
+  letter-spacing:.05em;
+}
+
+/* ============================================
+   CAREER TIMELINE
+============================================ */
+.timeline{
+  margin-top:60px;
+  position:relative;
+}
+.timeline::before{
+  content:'';
+  position:absolute;
+  left:110px;top:0;bottom:0;
+  width:1px;
+  background:var(--border);
+}
+.tl-row{
+  display:grid;
+  grid-template-columns:110px 30px 1fr;
+  align-items:center;
+  padding:20px 0;
+  border-bottom:1px solid var(--border);
+}
+.tl-row:first-child{border-top:1px solid var(--border);}
+.tl-year{
+  font-family:'JetBrains Mono', monospace;
+  font-size:13px;
+  color:var(--text-gray);
+}
+.tl-dot{
+  width:9px;height:9px;
+  border-radius:50%;
+  background:var(--bg);
+  border:1px solid var(--gold);
+  justify-self:center;
+  position:relative;z-index:1;
+}
+.tl-row.current .tl-dot{background:var(--gold);box-shadow:0 0 0 4px rgba(201,168,76,0.18);}
+.tl-content{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-left:24px;}
+.tl-team{font-size:16px;font-weight:700;}
+.tl-row.current .tl-team{color:var(--gold-light);}
+.tl-type{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  letter-spacing:.1em;
+  color:var(--text-gray);
+  border:1px solid var(--border);
+  padding:4px 10px;
+  white-space:nowrap;
+}
+.tl-row.current .tl-type{border-color:var(--border-gold);color:var(--gold);}
+.tl-row.current-tag{
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  color:var(--gold);
+  letter-spacing:.1em;
+}
+
+/* ============================================
+   GALLERY
+============================================ */
+.gallery-head{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:40px;flex-wrap:wrap;gap:20px;
+}
+.gallery-controls{display:flex;gap:10px;}
+.gallery-arrow{
+  width:44px;height:44px;
+  border:1px solid var(--border);
   display:flex;align-items:center;justify-content:center;
-  transition:background .2s,color .2s;flex-shrink:0;
+  font-size:16px;
+  transition:all .2s ease;
 }
-.slider-btn:hover{background:var(--gold);color:#080e1c;}
-.slider-btn:disabled{opacity:.3;pointer-events:none;}
-.slider-dots{display:flex;gap:8px;align-items:center;}
-.dot{
-  width:6px;height:6px;border-radius:50%;
-  background:var(--bdr);border:none;padding:0;transition:all .2s;
+.gallery-arrow:hover{border-color:var(--gold);color:var(--gold);}
+.gallery-viewport{overflow:hidden;}
+.gallery-track{
+  display:flex;
+  gap:16px;
+  transition:transform .5s cubic-bezier(.65,0,.35,1);
 }
-.dot.active{background:var(--gold);transform:scale(1.3);}
+.gallery-item{
+  flex:0 0 calc((100% - 32px)/3);
+  aspect-ratio:3/4;
+  overflow:hidden;
+  position:relative;
+  border:1px solid var(--border);
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease;}
+.gallery-item:hover img{transform:scale(1.06);}
+.gallery-item.coming{
+  display:flex;align-items:center;justify-content:center;
+  background:var(--bg-card);
+}
+.gallery-item.coming span{
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.14em;
+  color:var(--text-gray);
+  text-align:center;
+}
+.gallery-dots{display:flex;gap:8px;justify-content:center;margin-top:28px;}
+.gallery-dots button{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--border-gold);
+  transition:all .2s ease;
+}
+.gallery-dots button.active{background:var(--gold);width:22px;border-radius:4px;}
 
-/* ===== SUPPORT ===== */
-.support-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-@media(max-width:720px){.support-grid{grid-template-columns:1fr;}}
-.support-card{background:var(--bg2);border:1px solid var(--bdr);padding:28px 22px;transition:border-color .2s,transform .2s;}
-.support-card:hover{border-color:var(--bdrg);transform:translateY(-3px);}
-.support-card .snum{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--gold);opacity:.75;}
-.support-card .s-icon{font-size:1.5rem;margin:10px 0 8px;}
-.support-card h3{font-family:'Anton',sans-serif;font-size:1.05rem;color:var(--text);}
-.support-card p{font-size:0.84rem;color:var(--gray);margin-top:9px;line-height:1.65;}
-.badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
-.badge{font-family:'JetBrains Mono',monospace;font-size:0.58rem;color:var(--gold);background:rgba(201,168,76,0.1);border:1px solid var(--bdrg);padding:3px 9px;}
-
-/* ===== フォーム ===== */
-.form-block{margin-top:44px;}
-.tabbar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
-.tab-btn{
-  font-family:'JetBrains Mono',monospace;font-size:0.7rem;letter-spacing:0.02em;
-  background:transparent;border:1px solid var(--bdr);color:var(--gray);
-  padding:10px 18px;transition:all .2s;
+/* ============================================
+   SUPPORT
+============================================ */
+.services-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+  margin-bottom:80px;
 }
-.tab-btn:hover{color:var(--text);border-color:var(--bdrg);}
-.tab-btn.is-active{background:var(--gold);color:#080e1c;border-color:var(--gold);font-weight:700;}
-.form-panel{display:none;}
-.form-panel.is-active{display:block;}
-.app-form{background:var(--bg2);border:1px solid var(--bdrg);padding:30px;}
-@media(max-width:520px){.app-form{padding:20px 16px;}}
-.app-form h4{font-family:'Anton',sans-serif;font-size:1.2rem;color:var(--text);margin-bottom:6px;}
-.form-desc{color:var(--gray);font-size:0.86rem;margin-bottom:22px;line-height:1.7;}
-.form-desc strong{color:var(--gold);}
-.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 16px;}
-@media(max-width:600px){.field-grid{grid-template-columns:1fr;}}
-.field{display:flex;flex-direction:column;gap:6px;}
+.service-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  padding:36px 28px;
+  transition:border-color .25s ease, transform .25s ease;
+}
+.service-card:hover{border-color:var(--border-gold);transform:translateY(-4px);}
+.service-num{
+  font-family:'JetBrains Mono', monospace;
+  color:var(--gold);
+  font-size:12px;
+  margin-bottom:20px;
+}
+.service-card h3{font-family:'Anton', sans-serif;font-size:22px;margin-bottom:14px;letter-spacing:.01em;}
+.service-card p{color:var(--text-sub);font-size:14.5px;margin-bottom:16px;}
+.service-tag{
+  font-family:'JetBrains Mono', monospace;
+  font-size:10px;
+  color:var(--text-gray);
+  border-top:1px solid var(--border);
+  padding-top:14px;
+  letter-spacing:.08em;
+}
+
+.form-panel{background:var(--bg-card);border:1px solid var(--border);}
+.form-tabs{display:flex;border-bottom:1px solid var(--border);overflow-x:auto;}
+.form-tab{
+  flex:1;
+  padding:22px 20px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:12px;
+  letter-spacing:.08em;
+  color:var(--text-gray);
+  border-bottom:2px solid transparent;
+  white-space:nowrap;
+  transition:all .2s ease;
+  text-align:center;
+}
+.form-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
+.form-body{padding:44px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.field{margin-bottom:20px;}
 .field.full{grid-column:1/-1;}
-.field label{font-family:'JetBrains Mono',monospace;font-size:0.64rem;letter-spacing:.05em;color:var(--gold);opacity:.85;}
-.field label .req{color:var(--gold);margin-left:3px;opacity:1;}
+.field label{
+  display:block;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  color:var(--text-sub);
+  margin-bottom:8px;
+}
+.field label .req{color:var(--gold);margin-left:4px;}
 .field input,.field select,.field textarea{
-  background:var(--navy);border:1px solid rgba(255,255,255,0.12);
-  color:#f4f2ed;-webkit-text-fill-color:#f4f2ed;
-  font-family:'Zen Kaku Gothic New',sans-serif;font-size:0.9rem;
-  padding:10px 12px;outline:none;width:100%;
-  -webkit-appearance:none;appearance:none;border-radius:0;
-  transition:border-color .2s;
+  width:100%;
+  background:var(--bg);
+  border:1px solid var(--border);
+  color:var(--text-main);
+  padding:13px 14px;
+  font-size:14px;
+  transition:border-color .2s ease;
 }
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);}
-.field textarea{resize:vertical;min-height:84px;}
-.field select{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9a84c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 12px center;padding-right:34px;
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold);
 }
-.field input::placeholder,.field textarea::placeholder{color:#4a5a75;-webkit-text-fill-color:#4a5a75;opacity:1;}
-.radio-row,.check-row{display:flex;flex-wrap:wrap;gap:8px 18px;padding:4px 0;}
-.radio-row label,.check-row label{display:flex;align-items:center;gap:7px;font-size:0.86rem;color:var(--text);}
-.radio-row input,.check-row input{accent-color:var(--gold);width:15px;height:15px;flex-shrink:0;}
-.submit-row{margin-top:24px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
-.form-note{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--gray);}
+.field textarea{resize:vertical;min-height:90px;}
+.radio-group,.checkbox-group{display:flex;gap:18px;flex-wrap:wrap;}
+.radio-group label,.checkbox-group label{
+  display:flex;align-items:center;gap:8px;
+  font-family:'Zen Kaku Gothic New',sans-serif;
+  font-size:14px;color:var(--text-main);
+  margin-bottom:0;
+}
+.radio-group input,.checkbox-group input{width:auto;}
+.form-panel .submit-row{margin-top:8px;}
+.form-note{
+  font-size:12px;color:var(--text-gray);margin-top:14px;
+}
+.form-success{
+  display:none;
+  text-align:center;
+  padding:60px 20px;
+}
+.form-success.show{display:block;}
+.form-success .check{font-size:40px;color:var(--gold);margin-bottom:20px;}
 
-/* ===== COMING SOON ===== */
-.coming-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:44px;}
-@media(max-width:720px){.coming-grid{grid-template-columns:1fr;}}
-.cs-card{background:var(--bg2);border:1px solid var(--bdr);padding:22px 18px;}
-.cs-badge{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:.14em;color:var(--gold);background:rgba(201,168,76,0.08);border:1px solid var(--bdrg);padding:3px 9px;display:inline-block;margin-bottom:10px;}
-.cs-icon{font-size:1.3rem;margin-bottom:8px;}
-.cs-card h3{font-family:'Anton',sans-serif;font-size:0.96rem;color:var(--text);}
-.cs-card p{font-size:0.82rem;color:var(--gray);margin-top:8px;line-height:1.6;}
+.coming-soon{
+  margin-top:80px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.cs-card{
+  border:1px dashed var(--border);
+  padding:30px 26px;
+  position:relative;
+}
+.cs-badge{
+  font-family:'JetBrains Mono', monospace;
+  font-size:9px;
+  letter-spacing:.14em;
+  color:var(--gold);
+  border:1px solid var(--border-gold);
+  padding:4px 10px;
+  display:inline-block;
+  margin-bottom:16px;
+}
+.cs-card h4{font-family:'Anton', sans-serif;font-size:17px;letter-spacing:.01em;color:var(--text-sub);}
 
-/* ===== MESSAGE ===== */
-.msg-section{background:#080e1c;border:none;padding:80px 0;}
-.msg-inner{max-width:680px;}
-.msg-quote{
-  font-size:clamp(1rem,2vw,1.15rem);color:#c8d4e0;
-  line-height:1.9;margin:24px 0 18px;
-  border-left:2px solid var(--gold);padding-left:20px;
+/* ============================================
+   CTA
+============================================ */
+.cta-section{
+  padding:130px 0;
+  text-align:center;
+  position:relative;
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.09), transparent 60%),
+    var(--bg);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
 }
-.msg-attr{font-family:'JetBrains Mono',monospace;font-size:0.68rem;color:#7a8aa8;}
+.cta-section .section-title{margin-bottom:14px;}
+.cta-section .sub{color:var(--text-sub);margin-bottom:44px;font-size:15px;}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
 
-/* ===== CTA ===== */
-.cta-section{background:#0d1528;border-top:1px solid rgba(201,168,76,0.18);padding:72px 0;text-align:center;}
-.cta-section h2{font-family:'Anton',sans-serif;font-size:clamp(1.4rem,4vw,2.2rem);color:#f4f2ed;margin-bottom:8px;}
-.cta-section h2 em{color:var(--gold);font-style:normal;}
-.cta-section p{font-size:0.9rem;color:#7a8aa8;margin-bottom:30px;}
-.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-line{
-  background:#06C755;color:#fff;font-family:'Zen Kaku Gothic New',sans-serif;
-  font-weight:700;font-size:0.88rem;padding:14px 30px;
-  display:inline-flex;align-items:center;gap:8px;transition:filter .2s;
+/* ============================================
+   CONTACT
+============================================ */
+.contact-inner{
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:40px;
 }
-.btn-line:hover{filter:brightness(1.1);}
-.btn-contact{
-  background:transparent;border:1.5px solid rgba(255,255,255,0.28);
-  color:#f4f2ed;font-family:'Zen Kaku Gothic New',sans-serif;
-  font-weight:700;font-size:0.88rem;padding:14px 30px;
-  display:inline-flex;align-items:center;gap:8px;transition:all .2s;
+.contact-links{display:flex;gap:16px;flex-wrap:wrap;}
+.contact-link{
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--border);
+  padding:20px 26px;
+  min-width:220px;
+  transition:border-color .2s ease;
 }
-.btn-contact:hover{border-color:var(--gold);color:var(--gold);}
+.contact-link:hover{border-color:var(--gold);}
+.contact-link .ico{font-size:18px;color:var(--gold);}
+.contact-link .lbl{font-family:'JetBrains Mono', monospace;font-size:10px;color:var(--text-gray);letter-spacing:.1em;}
+.contact-link .val{font-size:14px;font-weight:700;margin-top:2px;}
 
-/* ===== CONTACT ===== */
-.contact-section{background:#080e1c;border-top:1px solid rgba(201,168,76,0.18);padding:80px 0;}
-.contact-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:32px;}
-@media(max-width:720px){.contact-inner{flex-direction:column;align-items:flex-start;}}
-.contact-title{font-family:'Anton',sans-serif;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.1;color:#f4f2ed;}
-.contact-title em{color:var(--gold);font-style:normal;}
-.social-list{display:flex;gap:12px;flex-wrap:wrap;}
-.social-list a{
-  font-family:'JetBrains Mono',monospace;font-size:0.74rem;
-  border:1px solid rgba(255,255,255,0.2);color:#f4f2ed;
-  padding:10px 18px;transition:border-color .2s,color .2s;
+/* ============================================
+   FOOTER
+============================================ */
+footer{
+  border-top:1px solid var(--border);
+  padding:56px 0 32px;
 }
-.social-list a:hover{border-color:var(--gold);color:var(--gold);}
+.footer-inner{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;
+  padding-bottom:32px;border-bottom:1px solid var(--border);
+}
+.footer-nav{display:flex;gap:28px;flex-wrap:wrap;}
+.footer-nav a{font-family:'JetBrains Mono', monospace;font-size:11px;letter-spacing:.1em;color:var(--text-sub);}
+.footer-bottom{
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  padding-top:24px;
+  font-family:'JetBrains Mono', monospace;
+  font-size:11px;
+  color:var(--text-gray);
+}
+.footer-bottom a{color:var(--text-gray);border-bottom:1px solid var(--border);}
 
-/* ===== FOOTER ===== */
-footer{background:#080e1c;border-top:1px solid rgba(255,255,255,0.06);padding:40px 0 28px;}
-.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;}
-.footer-logo{display:flex;flex-direction:column;line-height:1.1;}
-.footer-logo .logo-en{font-family:'Anton',sans-serif;font-size:1rem;letter-spacing:0.06em;color:#f4f2ed;}
-.footer-logo .logo-sub{font-family:'JetBrains Mono',monospace;font-size:0.48rem;letter-spacing:0.18em;color:rgba(201,168,76,0.7);}
-.footer-links{display:flex;gap:20px;flex-wrap:wrap;align-items:center;}
-.footer-links a{font-family:'JetBrains Mono',monospace;font-size:0.64rem;color:#4a5a75;letter-spacing:0.04em;transition:color .2s;}
-.footer-links a:hover{color:var(--gold);}
-.footer-social a{
-  font-family:'JetBrains Mono',monospace;font-size:0.7rem;
-  border:1px solid rgba(255,255,255,0.12);color:#7a8aa8;
-  padding:8px 14px;transition:all .2s;
-}
-.footer-social a:hover{border-color:var(--gold);color:var(--gold);}
-.footer-bottom{margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.footer-copy{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:#4a5a75;}
-.totop{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--gold);transition:opacity .2s;}
-.totop:hover{opacity:.7;}
+/* ============================================
+   REVEAL ANIM
+============================================ */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:860px){
-  .burger{display:flex;}
-  .navlinks,.nav-ig{display:none;}
-}
-@media(max-width:600px){
-  section{padding:64px 0;}
-  .msg-section,.contact-section,.ach-section,.cta-section{padding:56px 0;}
-}
-@media(prefers-reduced-motion:reduce){
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
   html{scroll-behavior:auto;}
-  *,*::before,*::after{transition:none!important;animation:none!important;}
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width:920px){
+  nav.main-nav .navlinks{display:none;}
+  .hamburger{display:flex;}
+  .player-grid{grid-template-columns:1fr;gap:40px;}
+  .ach-grid{grid-template-columns:1fr;gap:28px;}
+  .ach-item{border-right:none;border-bottom:1px solid var(--border);padding:0 0 24px;}
+  .ach-item:last-child{border-bottom:none;padding-bottom:0;}
+  .services-grid{grid-template-columns:1fr;}
+  .form-grid{grid-template-columns:1fr;}
+  .form-body{padding:28px 22px;}
+  .coming-soon{grid-template-columns:1fr;}
+  .gallery-item{flex:0 0 calc((100% - 16px)/2);}
+  .hero-status{grid-template-columns:repeat(2,1fr);}
+  .contact-inner{flex-direction:column;align-items:flex-start;}
+  .message-mark{font-size:100px;}
+  .timeline::before{left:70px;}
+  .tl-row{grid-template-columns:70px 24px 1fr;}
+}
+@media (max-width:600px){
+  .section{padding:80px 0;}
+  .gallery-item{flex:0 0 calc(100% - 0px);}
+  .tl-content{flex-direction:column;align-items:flex-start;gap:8px;}
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <nav aria-label="メインナビゲーション">
-      <a class="logo" href="#top" aria-label="トップへ戻る">
-        <span class="logo-en">HIROYUKI EBATO</span>
-        <span class="logo-sub">OFFICIAL</span>
-      </a>
-      <ul class="navlinks" role="list">
-        <li><a href="#player">PLAYER</a></li>
-        <li><a href="#career">CAREER</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#support">SUPPORT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
-      <a class="nav-ig" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener noreferrer">@ebt_gore</a>
-      <button class="burger" id="burger" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ============ HEADER ============ -->
+<header id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">
+      <span class="name">HIROYUKI EBATO</span>
+      <span class="sub">OFFICIAL</span>
+    </a>
+    <nav class="main-nav">
+      <div class="navlinks">
+        <a href="#player" data-nav>PLAYER</a>
+        <a href="#career" data-nav>CAREER</a>
+        <a href="#gallery" data-nav>GALLERY</a>
+        <a href="#support" data-nav>SUPPORT</a>
+        <a href="#contact" data-nav>CONTACT</a>
+      </div>
+      <div class="header-right">
+        <a class="ig-pill" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener">@ebt_gore</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="テーマ切り替え">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
 
-<dialog id="mobile-nav" aria-label="ナビゲーション">
-  <button id="mobile-nav-close" aria-label="閉じる">✕</button>
-  <nav>
-    <ul>
-      <li><a href="#player"><span>01</span>PLAYER</a></li>
-      <li><a href="#career"><span>02</span>CAREER</a></li>
-      <li><a href="#gallery"><span>03</span>GALLERY</a></li>
-      <li><a href="#support"><span>04</span>SUPPORT</a></li>
-      <li><a href="#contact"><span>05</span>CONTACT</a></li>
-    </ul>
-    <a class="mobile-nav-ig" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener noreferrer">Instagram @ebt_gore ↗</a>
-  </nav>
-</dialog>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#player" data-nav>PLAYER</a>
+  <a href="#career" data-nav>CAREER</a>
+  <a href="#gallery" data-nav>GALLERY</a>
+  <a href="#support" data-nav>SUPPORT</a>
+  <a href="#contact" data-nav>CONTACT</a>
+  <a class="ig-pill" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener" style="margin-top:10px;">@ebt_gore</a>
+</div>
 
-<main>
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap hero-content">
+    <div class="hero-label">GOLEIRO / GK COACH — BOALUZ NAGANO 2026–27</div>
+    <h1 class="hero-title">江波戸 紘之<span class="en mono">HIROYUKI EBATO</span></h1>
 
-<!-- HERO -->
-<section id="top" style="border-top:none;padding:0;" aria-label="ヒーロー">
-  <div class="hero">
-    <!-- z-index:1 写真 -->
-    <img class="hero-photo"
-         src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg"
-         alt="江波戸紘之選手" width="1200" height="1600" fetchpriority="high">
-    <!-- z-index:2 グラデーションオーバーレイ -->
-    <div class="hero-dark" aria-hidden="true"></div>
-    <!-- z-index:3 テキスト（必ず最前面） -->
-    <div class="hero-body">
-    <div class="wrap" style="width:100%;">
-      <p class="hero-eyebrow">GOLEIRO / GK COACH — BOALUZ NAGANO 2026–27</p>
-      <h1>江波戸 紘之<span class="en">HIROYUKI EBATO</span></h1>
-      <div class="hero-rule"></div>
-      <div class="hero-stats">
-        <span><small>所属</small><b class="g">ボアルース長野</b></span>
-        <span><small>役割</small><b class="g">選手 / GKコーチ</b></span>
-        <span><small>出身</small><b>千葉県</b></span>
-        <span><small>身長 / 体重</small><b>180cm / 87kg</b></span>
-      </div>
-      <div class="hero-cta">
-        <a class="btn" href="#support">レッスン・クリニック申込 →</a>
-        <a class="btn ghost" href="#contact">お問い合わせ</a>
-      </div>
-    </div><!-- /.wrap -->
-    </div><!-- /.hero-body -->
-  </div><!-- /.hero -->
+    <div class="hero-status">
+      <div><div class="k mono">所属</div><div class="v">ボアルース長野</div></div>
+      <div><div class="k mono">役割</div><div class="v">選手 / GKコーチ</div></div>
+      <div><div class="k mono">出身</div><div class="v">千葉県</div></div>
+      <div><div class="k mono">身長／体重</div><div class="v">180cm / 87kg</div></div>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#support" class="btn btn-primary">レッスン・クリニック申込 →</a>
+      <a href="#contact" class="btn btn-outline">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="scroll-cue mono">SCROLL</div>
 </section>
 
-<!-- ACHIEVEMENT -->
-<section class="ach-section" aria-label="実績">
-  <div class="wrap">
-    <div class="ach-grid">
-      <div class="ach-item">
-        <div><span class="ach-num">15</span><span class="ach-unit">+</span></div>
-        <p class="ach-lbl">YEARS OF FUTSAL</p>
-        <p class="ach-ja">フットサル競技歴</p>
-      </div>
-      <div class="ach-item">
-        <div><span class="ach-num">5</span><span class="ach-unit">+</span></div>
-        <p class="ach-lbl">F-LEAGUE SEASONS</p>
-        <p class="ach-ja">Fリーグ在籍シーズン</p>
-      </div>
-      <div class="ach-item">
-        <div><span class="ach-num">2</span><span class="ach-unit">役</span></div>
-        <p class="ach-lbl">DUAL ROLE</p>
-        <p class="ach-ja">選手 × GKコーチ兼任</p>
-      </div>
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="achievements">
+  <div class="wrap ach-grid">
+    <div class="ach-item reveal">
+      <div class="ach-num">15+</div>
+      <div class="ach-label mono">Years of Futsal — フットサル競技歴</div>
+    </div>
+    <div class="ach-item reveal">
+      <div class="ach-num">5+</div>
+      <div class="ach-label mono">F-League Seasons — Fリーグ在籍シーズン</div>
+    </div>
+    <div class="ach-item reveal">
+      <div class="ach-num">2役</div>
+      <div class="ach-label mono">Dual Role — 選手 × GKコーチ兼任</div>
     </div>
   </div>
 </section>
 
-<!-- PLAYER -->
-<section id="player" aria-labelledby="title-player">
+<!-- ============ PLAYER ============ -->
+<section class="section" id="player">
   <div class="wrap">
-    <p class="sec-label">01 / ABOUT</p>
-    <h2 class="sec-title" id="title-player">THE <em>GOALKEEPER</em></h2>
+    <div class="eyebrow">Player</div>
     <div class="player-grid">
-      <!-- 左：宣材写真（大） -->
-      <div class="player-photo-wrap">
-        <img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg"
-             alt="江波戸紘之 宣材写真" loading="lazy">
+      <div class="player-photo reveal">
+        <img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 選手写真" loading="lazy">
       </div>
-      <!-- 右：テキスト＋データ -->
-      <div class="player-info">
-        <div class="player-text">
-          <p>千葉県出身。少年時代にサッカーで競技の基礎を築き、社会人転向後にフットサルのゴレイロへ転身。複数クラブでゴールを守り抜いたキャリアを経て、2021年にFリーグ・デウソン神戸へ加入。</p>
-          <p>2026-27シーズンよりボアルース長野へ移籍。選手としてプレーするだけでなく、GKコーチとしてチームの守備強化も担う。本業との「二刀流」で長年競技を続けてきた経験をもとに、個人レッスンやゴレイロクリニックでの指導も行っている。</p>
-        </div>
-        <div class="data-card">
-          <p class="data-card-head">PLAYER DATA</p>
-          <dl>
-            <div class="data-row"><dt>NAME</dt><dd>江波戸 紘之</dd></div>
-            <div class="data-row"><dt>READ</dt><dd>えばと ひろゆき</dd></div>
-            <div class="data-row"><dt>POSITION</dt><dd class="g">ゴレイロ（GK）</dd></div>
-            <div class="data-row"><dt>ROLE</dt><dd class="g">選手 / GKコーチ</dd></div>
-            <div class="data-row"><dt>TEAM</dt><dd>ボアルース長野</dd></div>
-            <div class="data-row"><dt>LEAGUE</dt><dd>Fリーグ</dd></div>
-            <div class="data-row"><dt>BIRTHDAY</dt><dd>1989年3月13日</dd></div>
-            <div class="data-row"><dt>HEIGHT / WT</dt><dd>180cm / 87kg</dd></div>
-            <div class="data-row"><dt>HOMETOWN</dt><dd>千葉県</dd></div>
-          </dl>
+      <div class="player-intro reveal">
+        <h2 class="section-title">江波戸 紘之<span class="jp">ゴレイロ、その先も見据えて。</span></h2>
+        <p>千葉県出身。少年時代にサッカーで競技の基礎を築き、社会人転向後にフットサルのゴレイロへ転身。複数クラブでゴールを守り抜いたキャリアを経て、2021年にFリーグ・デウソン神戸へ加入。</p>
+        <p>2026-27シーズンよりボアルース長野へ移籍。選手としてプレーするだけでなく、GKコーチとしてチームの守備強化も担う。本業との「二刀流」で長年競技を続けてきた経験をもとに、個人レッスンやゴレイロクリニックでの指導も行っている。</p>
+
+        <div class="data-table">
+          <div class="row"><div class="k">NAME</div><div class="v">江波戸 紘之</div></div>
+          <div class="row"><div class="k">READ</div><div class="v">えばと ひろゆき</div></div>
+          <div class="row"><div class="k">POSITION</div><div class="v">ゴレイロ（GK）</div></div>
+          <div class="row highlight"><div class="k">ROLE</div><div class="v">選手 / GKコーチ</div></div>
+          <div class="row highlight"><div class="k">TEAM</div><div class="v">ボアルース長野</div></div>
+          <div class="row"><div class="k">LEAGUE</div><div class="v">Fリーグ</div></div>
+          <div class="row"><div class="k">BIRTHDAY</div><div class="v">1989年3月13日</div></div>
+          <div class="row"><div class="k">HEIGHT / WT</div><div class="v">180cm / 87kg</div></div>
+          <div class="row"><div class="k">HOMETOWN</div><div class="v">千葉県</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- MESSAGE -->
-<section class="msg-section" aria-labelledby="title-msg">
+<!-- ============ MESSAGE ============ -->
+<section class="message-section">
+  <div class="message-mark display">"</div>
   <div class="wrap">
-    <div class="msg-inner">
-      <p class="sec-label" style="color:var(--gold);">MESSAGE / 思い</p>
-      <h2 class="sec-title" style="color:#f4f2ed;margin-bottom:0;" id="title-msg">ボアルース長野のために、<em>すべてをかけて戦う。</em></h2>
-      <blockquote class="msg-quote">
-        このクラブの未来をつくる力になりたいと思い、入団を決断しました。その想いを結果で示せるよう、日々全力で取り組み、チームの勝利に貢献していきます。
-      </blockquote>
-      <p class="msg-attr">— 江波戸紘之（ボアルース長野加入コメントより）</p>
+    <div class="message-inner reveal">
+      <h2 class="message-title">ボアルース長野のために、<br>すべてをかけて戦う。</h2>
+      <p class="message-body">このクラブの未来をつくる力になりたいと思い、入団を決断しました。その想いを結果で示せるよう、日々全力で取り組み、チームの勝利に貢献していきます。</p>
+      <div class="message-cite">— 江波戸紘之（ボアルース長野加入コメントより）</div>
     </div>
   </div>
 </section>
 
-<!-- CAREER -->
-<section id="career" aria-labelledby="title-career">
+<!-- ============ CAREER ============ -->
+<section class="section" id="career">
   <div class="wrap">
-    <p class="sec-label">02 / HISTORY</p>
-    <h2 class="sec-title" id="title-career">CAREER</h2>
-    <div class="timeline">
-      <div class="tl-line"></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2000<br>–<br>2002</p></div><div class="tl-right"><p class="tl-team">美浜南キッカーズ</p><span class="tl-tag">SOCCER</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2003<br>–<br>2005</p></div><div class="tl-right"><p class="tl-team">浦安市立美浜中学校</p><span class="tl-tag">SOCCER</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2006<br>–<br>2008</p></div><div class="tl-right"><p class="tl-team">駒場学園高等学校</p><span class="tl-tag">SOCCER</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2010<br>–<br>2011</p></div><div class="tl-right"><p class="tl-team">FC PAO</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2011<br>–<br>2012</p></div><div class="tl-right"><p class="tl-team">malva chiba fc</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2013<br>–<br>2014</p></div><div class="tl-right"><p class="tl-team">ロボガトフットサルクラブ</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2014<br>–<br>2017</p></div><div class="tl-right"><p class="tl-team">アズヴェール藤沢</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2018<br>–<br>2020</p></div><div class="tl-right"><p class="tl-team">FCmm</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2021<br>–<br>2023</p></div><div class="tl-right"><p class="tl-team">デウソン神戸</p><span class="tl-tag">F LEAGUE</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2023<br>–<br>2024</p></div><div class="tl-right"><p class="tl-team">カンカンボーイズ</p><span class="tl-tag">FUTSAL</span></div></div>
-      <div class="tl-item"><div class="tl-left"><p class="tl-year">2025<br>–<br>2026</p></div><div class="tl-right"><p class="tl-team">デウソン神戸</p><span class="tl-tag">F LEAGUE</span></div></div>
-      <div class="tl-item current"><div class="tl-left"><p class="tl-year">2026<br>–<br>現在</p></div><div class="tl-right"><p class="tl-team">ボアルース長野</p><span class="tl-tag">F LEAGUE / GKコーチ兼任</span></div></div>
-    </div>
-  </div>
-</section>
+    <div class="eyebrow">Career</div>
+    <h2 class="section-title">CAREER<span class="jp">競技歴タイムライン</span></h2>
 
-<!-- GALLERY スライダー -->
-<section id="gallery" aria-labelledby="title-gallery">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="sec-head-text">
-        <p class="sec-label">03 / PHOTO</p>
-        <h2 class="sec-title" id="title-gallery">GALLERY</h2>
+    <div class="timeline reveal">
+      <div class="tl-row">
+        <div class="tl-year mono">2000–2002</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">美浜南キッカーズ</div><div class="tl-type">SOCCER</div></div>
       </div>
-      <div class="slider-nav" style="margin-top:0;">
-        <button class="slider-btn" id="prev" aria-label="前へ">‹</button>
-        <div class="slider-dots" id="dots"></div>
-        <button class="slider-btn" id="next" aria-label="次へ">›</button>
+      <div class="tl-row">
+        <div class="tl-year mono">2003–2005</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">浦安市立美浜中学校</div><div class="tl-type">SOCCER</div></div>
       </div>
-    </div>
-    <div class="slider-wrap" id="slider-wrap">
-      <div class="slider-track" id="slider-track">
-        <div class="slide"><img src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg" alt="江波戸紘之 01" loading="lazy"></div>
-        <div class="slide"><img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 02" loading="lazy"></div>
-        <div class="slide"><img src="https://i.postimg.cc/KYfQQ7cN/line-oa-chat-260624-143150.jpg" alt="江波戸紘之 03" loading="lazy"></div>
-        <div class="slide"><img src="https://i.postimg.cc/W48SSmp5/line-oa-chat-260624-143152.jpg" alt="江波戸紘之 04" loading="lazy"></div>
-        <div class="slide"><img src="https://i.postimg.cc/q7wQQcBj/line-oa-chat-260624-143153.jpg" alt="江波戸紘之 05" loading="lazy"></div>
-        <div class="slide"><div class="slide-ph">MORE COMING</div></div>
+      <div class="tl-row">
+        <div class="tl-year mono">2006–2008</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">駒場学園高等学校</div><div class="tl-type">SOCCER</div></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SUPPORT -->
-<section id="support" aria-labelledby="title-support">
-  <div class="wrap">
-    <p class="sec-label">04 / SERVICE</p>
-    <h2 class="sec-title" id="title-support">SUPPORT</h2>
-    <div class="support-grid">
-      <div class="support-card"><p class="snum">01</p><div class="s-icon">🥅</div><h3>個人レッスン</h3><p>マンツーマン・少人数制の個別指導。基礎から実践まで目標に合わせて対応。</p><div class="badge-row"><span class="badge">📍 対面</span><span class="badge">💻 WEB</span></div></div>
-      <div class="support-card"><p class="snum">02</p><div class="s-icon">⚽</div><h3>ゴレイロクリニック</h3><p>GK専門クリニック。年齢・レベル不問。GKコーチとしての実践的な技術指導。</p><div class="badge-row"><span class="badge">📍 対面開催</span></div></div>
-      <div class="support-card"><p class="snum">03</p><div class="s-icon">🤝</div><h3>スポンサー募集</h3><p>企業・個人スポンサー様を随時募集しています。内容はご相談の上で対応。</p><div class="badge-row"><span class="badge">随時募集中</span></div></div>
-    </div>
-    <!-- フォーム -->
-    <div class="form-block">
-      <div class="tabbar" role="tablist">
-        <button class="tab-btn is-active" id="tab-lesson" role="tab" aria-selected="true" aria-controls="panel-lesson">個人レッスン申込</button>
-        <button class="tab-btn" id="tab-clinic" role="tab" aria-selected="false" aria-controls="panel-clinic">ゴレイロクリニック申込</button>
-        <button class="tab-btn" id="tab-sponsor" role="tab" aria-selected="false" aria-controls="panel-sponsor">スポンサー申込</button>
+      <div class="tl-row">
+        <div class="tl-year mono">2010–2011</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">FC PAO</div><div class="tl-type">FUTSAL</div></div>
       </div>
-      <div class="form-panel is-active" id="panel-lesson" role="tabpanel">
-        <form class="app-form" action="#" method="post" novalidate>
-          <h4>個人レッスン 申込フォーム</h4>
-          <p class="form-desc">マンツーマン・少人数制の個別レッスン。<strong>対面・WEBオンライン両対応。</strong></p>
-          <div class="field-grid">
-            <div class="field"><label for="l-name">お名前<span class="req">必須</span></label><input type="text" id="l-name" name="name" autocomplete="name" required></div>
-            <div class="field"><label for="l-kana">ふりがな</label><input type="text" id="l-kana" name="kana"></div>
-            <div class="field"><label for="l-age">年齢</label><input type="text" id="l-age" name="age" placeholder="例）28"></div>
-            <div class="field"><label for="l-exp">競技経験</label><select id="l-exp"><option value="">選択</option><option>初心者</option><option>経験者（〜3年）</option><option>経験者（3年以上）</option></select></div>
-            <div class="field full"><label>レッスン形式<span class="req">必須</span></label><div class="radio-row"><label><input type="radio" name="lesson_type" value="inperson" required>📍 対面</label><label><input type="radio" name="lesson_type" value="online">💻 WEBオンライン</label><label><input type="radio" name="lesson_type" value="either">どちらでも可</label></div></div>
-            <div class="field"><label for="l-email">メールアドレス<span class="req">必須</span></label><input type="email" id="l-email" autocomplete="email" required></div>
-            <div class="field"><label for="l-tel">電話番号</label><input type="tel" id="l-tel" autocomplete="tel"></div>
-            <div class="field"><label for="l-date">希望日</label><input type="date" id="l-date"></div>
-            <div class="field"><label>希望時間帯</label><div class="radio-row"><label><input type="radio" name="time" value="am">午前</label><label><input type="radio" name="time" value="pm">午後</label><label><input type="radio" name="time" value="night">夜間</label></div></div>
-            <div class="field full"><label for="l-msg">メッセージ</label><textarea id="l-msg" placeholder="改善したいポイント、目標などご自由に"></textarea></div>
+      <div class="tl-row">
+        <div class="tl-year mono">2011–2012</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">malva chiba fc</div><div class="tl-type">FUTSAL</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2013–2014</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">ロボガトフットサルクラブ</div><div class="tl-type">FUTSAL</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2014–2017</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">アズヴェール藤沢</div><div class="tl-type">FUTSAL</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2018–2020</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">FCmm</div><div class="tl-type">FUTSAL</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2021–2023</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">デウソン神戸</div><div class="tl-type">F LEAGUE</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2023–2024</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">カンカンボーイズ</div><div class="tl-type">FUTSAL</div></div>
+      </div>
+      <div class="tl-row">
+        <div class="tl-year mono">2025–2026</div><div class="tl-dot"></div>
+        <div class="tl-content"><div class="tl-team">デウソン神戸</div><div class="tl-type">F LEAGUE</div></div>
+      </div>
+      <div class="tl-row current">
+        <div class="tl-year mono">2026–現在</div><div class="tl-dot"></div>
+        <div class="tl-content">
+          <div>
+            <div class="tl-team">ボアルース長野</div>
+            <div class="tl-row current-tag mono" style="margin-top:4px;">● CURRENT</div>
           </div>
-          <div class="submit-row"><button type="submit" class="btn">送信する →</button><span class="form-note">※ 担当より個別にご連絡します</span></div>
-        </form>
+          <div class="tl-type">F LEAGUE / GKコーチ兼任</div>
+        </div>
       </div>
-      <div class="form-panel" id="panel-clinic" role="tabpanel">
-        <form class="app-form" action="#" method="post" novalidate>
-          <h4>ゴレイロクリニック 申込フォーム</h4>
-          <p class="form-desc">GK専門クリニックへの参加申込。学年・レベル不問。保護者代理申込も可能。</p>
-          <div class="field-grid">
-            <div class="field"><label for="c-name">参加者氏名<span class="req">必須</span></label><input type="text" id="c-name" required></div>
-            <div class="field"><label for="c-kana">ふりがな</label><input type="text" id="c-kana"></div>
-            <div class="field"><label for="c-grade">学年・年齢</label><input type="text" id="c-grade" placeholder="例）小5 / 32歳"></div>
-            <div class="field"><label for="c-guardian">保護者氏名（未成年の場合）</label><input type="text" id="c-guardian"></div>
-            <div class="field"><label for="c-email">メールアドレス<span class="req">必須</span></label><input type="email" id="c-email" autocomplete="email" required></div>
-            <div class="field"><label for="c-tel">電話番号<span class="req">必須</span></label><input type="tel" id="c-tel" autocomplete="tel" required></div>
-            <div class="field"><label for="c-date">希望日</label><input type="date" id="c-date"></div>
-            <div class="field"><label for="c-gkexp">GK経験</label><select id="c-gkexp"><option value="">選択</option><option>未経験</option><option>1年未満</option><option>1〜3年</option><option>3年以上</option></select></div>
-            <div class="field full"><label for="c-msg">気になる技術・課題</label><textarea id="c-msg" placeholder="例）キャッチング、1対1など"></textarea></div>
-          </div>
-          <div class="submit-row"><button type="submit" class="btn">送信する →</button><span class="form-note">※ 開催日程は別途調整します</span></div>
-        </form>
-      </div>
-      <div class="form-panel" id="panel-sponsor" role="tabpanel">
-        <form class="app-form" action="#" method="post" novalidate>
-          <h4>スポンサー 申込フォーム</h4>
-          <p class="form-desc">個人・法人を問わずご相談を受け付けています。</p>
-          <div class="field-grid">
-            <div class="field"><label for="s-name">お名前 / 法人名<span class="req">必須</span></label><input type="text" id="s-name" required></div>
-            <div class="field"><label for="s-contact">ご担当者名</label><input type="text" id="s-contact"></div>
-            <div class="field"><label for="s-email">メールアドレス<span class="req">必須</span></label><input type="email" id="s-email" autocomplete="email" required></div>
-            <div class="field"><label for="s-tel">電話番号</label><input type="tel" id="s-tel" autocomplete="tel"></div>
-            <div class="field full"><label>サポート内容</label><div class="check-row"><label><input type="checkbox" name="support_type" value="individual">個人サポーター</label><label><input type="checkbox" name="support_type" value="goods">物品提供</label><label><input type="checkbox" name="support_type" value="financial">資金サポート</label><label><input type="checkbox" name="support_type" value="other">その他</label></div></div>
-            <div class="field full"><label for="s-msg">メッセージ</label><textarea id="s-msg" placeholder="ご相談などご自由に"></textarea></div>
-          </div>
-          <div class="submit-row"><button type="submit" class="btn">送信する →</button><span class="form-note">※ 内容確認後ご連絡します</span></div>
-        </form>
-      </div>
-    </div>
-    <div class="coming-grid">
-      <div class="cs-card"><div class="cs-badge">COMING SOON</div><div class="cs-icon">🏅</div><h3>スポンサーバナー掲載</h3><p>スポンサー様のバナーを掲載予定。</p></div>
-      <div class="cs-card"><div class="cs-badge">COMING SOON</div><div class="cs-icon">💬</div><h3>指導実績・利用者の声</h3><p>レッスン・クリニック参加者のレビューを掲載予定。</p></div>
-      <div class="cs-card"><div class="cs-badge">COMING SOON</div><div class="cs-icon">✍️</div><h3>BLOG / NOTE</h3><p>noteで発信予定。リンクは近日公開。</p></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section" style="border-top:none;">
+<!-- ============ GALLERY ============ -->
+<section class="section" id="gallery">
   <div class="wrap">
-    <h2>まずは<em>お気軽に</em>ご相談ください</h2>
-    <p>レッスン・クリニック・スポンサーなど何でもお気軽に</p>
-    <div class="cta-btns">
-      <a class="btn-line" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener noreferrer">Instagram DMで相談する</a>
-      <a class="btn-contact" href="mailto:contact@example.com">メールで問い合わせる</a>
+    <div class="gallery-head">
+      <div>
+        <div class="eyebrow">Gallery</div>
+        <h2 class="section-title" style="margin-bottom:0;">GALLERY</h2>
+      </div>
+      <div class="gallery-controls">
+        <button class="gallery-arrow" id="galPrev" aria-label="前へ">←</button>
+        <button class="gallery-arrow" id="galNext" aria-label="次へ">→</button>
+      </div>
     </div>
+
+    <div class="gallery-viewport">
+      <div class="gallery-track" id="galleryTrack">
+        <div class="gallery-item"><img src="https://i.postimg.cc/YSMb1D7T/line-oa-chat-260624-143147.jpg" alt="江波戸紘之 ギャラリー写真1" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/bvp3QVPF/line-oa-chat-260624-143148.jpg" alt="江波戸紘之 ギャラリー写真2" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/KYfQQ7cN/line-oa-chat-260624-143150.jpg" alt="江波戸紘之 ギャラリー写真3" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/W48SSmp5/line-oa-chat-260624-143152.jpg" alt="江波戸紘之 ギャラリー写真4" loading="lazy"></div>
+        <div class="gallery-item"><img src="https://i.postimg.cc/q7wQQcBj/line-oa-chat-260624-143153.jpg" alt="江波戸紘之 ギャラリー写真5" loading="lazy"></div>
+        <div class="gallery-item coming"><span class="mono">MORE<br>COMING</span></div>
+      </div>
+    </div>
+    <div class="gallery-dots" id="galleryDots"></div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact-section" style="border-top:none;">
+<!-- ============ SUPPORT ============ -->
+<section class="section" id="support">
   <div class="wrap">
-    <p class="sec-label" style="color:var(--gold);">05 / CONTACT</p>
-    <div class="contact-inner">
-      <h2 class="contact-title">応援・取材・<em>スポンサー</em>のご連絡はこちらから。</h2>
-      <div class="social-list">
-        <a href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a>
-        <a href="mailto:contact@example.com">EMAIL ↗</a>
+    <div class="eyebrow">Support</div>
+    <h2 class="section-title" style="margin-bottom:48px;">SUPPORT<span class="jp">レッスン・クリニック・スポンサー</span></h2>
+
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-num mono">01</div>
+        <h3>個人レッスン</h3>
+        <p>マンツーマン・少人数制の個別指導。基礎から実践まで、目標に合わせて対応します。</p>
+        <div class="service-tag">対面／WEBオンライン対応</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num mono">02</div>
+        <h3>ゴレイロクリニック</h3>
+        <p>GK専門クリニック。年齢・レベル不問。GKコーチとしての実践的な技術指導を行います。</p>
+        <div class="service-tag">対面開催</div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-num mono">03</div>
+        <h3>スポンサー募集</h3>
+        <p>企業・個人スポンサー様を随時募集しております。内容はご相談の上で対応いたします。</p>
+        <div class="service-tag">個人・法人問わずご相談ください</div>
+      </div>
+    </div>
+
+    <div class="form-panel reveal">
+      <div class="form-tabs">
+        <button class="form-tab active" data-tab="lesson">個人レッスン申込</button>
+        <button class="form-tab" data-tab="clinic">ゴレイロクリニック申込</button>
+        <button class="form-tab" data-tab="sponsor">スポンサー申込</button>
+      </div>
+
+      <div class="form-body">
+
+        <!-- LESSON FORM -->
+        <form class="app-form" data-form="lesson">
+          <div class="form-grid">
+            <div class="field"><label>お名前<span class="req">必須</span></label><input type="text" required></div>
+            <div class="field"><label>ふりがな</label><input type="text"></div>
+            <div class="field"><label>年齢</label><input type="number" min="0"></div>
+            <div class="field">
+              <label>競技経験</label>
+              <select><option>初心者</option><option>経験者〜3年</option><option>経験者3年以上</option></select>
+            </div>
+            <div class="field full">
+              <label>レッスン形式<span class="req">必須</span></label>
+              <div class="radio-group">
+                <label><input type="radio" name="lesson-format" required> 対面</label>
+                <label><input type="radio" name="lesson-format"> WEBオンライン</label>
+                <label><input type="radio" name="lesson-format"> どちらでも可</label>
+              </div>
+            </div>
+            <div class="field"><label>メール<span class="req">必須</span></label><input type="email" required></div>
+            <div class="field"><label>電話番号</label><input type="tel"></div>
+            <div class="field"><label>希望日</label><input type="date"></div>
+            <div class="field">
+              <label>希望時間帯</label>
+              <select><option>午前</option><option>午後</option><option>夜間</option></select>
+            </div>
+            <div class="field full"><label>メッセージ</label><textarea></textarea></div>
+          </div>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">送信する</button>
+            <p class="form-note">※フォーム送信機能を利用するには、送信先（Formspreeなど）の設定が別途必要です。</p>
+          </div>
+        </form>
+
+        <!-- CLINIC FORM -->
+        <form class="app-form" data-form="clinic" style="display:none;">
+          <div class="form-grid">
+            <div class="field"><label>参加者氏名<span class="req">必須</span></label><input type="text" required></div>
+            <div class="field"><label>ふりがな</label><input type="text"></div>
+            <div class="field"><label>学年・年齢</label><input type="text"></div>
+            <div class="field"><label>保護者氏名（未成年の場合）</label><input type="text"></div>
+            <div class="field"><label>メール<span class="req">必須</span></label><input type="email" required></div>
+            <div class="field"><label>電話番号<span class="req">必須</span></label><input type="tel" required></div>
+            <div class="field"><label>希望日</label><input type="date"></div>
+            <div class="field">
+              <label>GK経験</label>
+              <select><option>未経験</option><option>1年未満</option><option>1〜3年</option><option>3年以上</option></select>
+            </div>
+            <div class="field full"><label>気になる技術・課題</label><textarea></textarea></div>
+          </div>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">送信する</button>
+            <p class="form-note">※フォーム送信機能を利用するには、送信先（Formspreeなど）の設定が別途必要です。</p>
+          </div>
+        </form>
+
+        <!-- SPONSOR FORM -->
+        <form class="app-form" data-form="sponsor" style="display:none;">
+          <div class="form-grid">
+            <div class="field"><label>お名前/法人名<span class="req">必須</span></label><input type="text" required></div>
+            <div class="field"><label>ご担当者名</label><input type="text"></div>
+            <div class="field"><label>メール<span class="req">必須</span></label><input type="email" required></div>
+            <div class="field"><label>電話番号</label><input type="tel"></div>
+            <div class="field full">
+              <label>サポート内容</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox"> 個人サポーター</label>
+                <label><input type="checkbox"> 物品提供</label>
+                <label><input type="checkbox"> 資金サポート</label>
+                <label><input type="checkbox"> その他</label>
+              </div>
+            </div>
+            <div class="field full"><label>メッセージ</label><textarea></textarea></div>
+          </div>
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary">送信する</button>
+            <p class="form-note">※フォーム送信機能を利用するには、送信先（Formspreeなど）の設定が別途必要です。</p>
+          </div>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="check">✓</div>
+          <h3 class="display" style="font-size:22px;margin-bottom:10px;">送信ありがとうございました</h3>
+          <p style="color:var(--text-sub);">内容を確認の上、追ってご連絡いたします。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="coming-soon">
+      <div class="cs-card">
+        <div class="cs-badge mono">COMING SOON</div>
+        <h4>スポンサーバナー掲載</h4>
+      </div>
+      <div class="cs-card">
+        <div class="cs-badge mono">COMING SOON</div>
+        <h4>指導実績・利用者の声</h4>
+      </div>
+      <div class="cs-card">
+        <div class="cs-badge mono">COMING SOON</div>
+        <h4>BLOG / NOTE（noteで発信予定）</h4>
       </div>
     </div>
   </div>
 </section>
 
-</main>
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="wrap">
+    <h2 class="section-title">まずはお気軽に<br>ご相談ください</h2>
+    <p class="sub">レッスン・クリニック・スポンサーなど何でもお気軽に</p>
+    <div class="cta-buttons">
+      <a href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener" class="btn btn-primary">Instagram DMで相談する</a>
+      <a href="mailto:contact@example.com" class="btn btn-outline">メールで問い合わせる</a>
+    </div>
+  </div>
+</section>
 
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contact">
+  <div class="wrap contact-inner">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2 class="section-title" style="margin-bottom:0;">応援・取材・<br>スポンサーの<br>ご連絡はこちらから。</h2>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener">
+        <div class="ico">◎</div>
+        <div><div class="lbl mono">INSTAGRAM</div><div class="val">@ebt_gore</div></div>
+      </a>
+      <a class="contact-link" href="mailto:contact@example.com">
+        <div class="ico">✉</div>
+        <div><div class="lbl mono">EMAIL</div><div class="val">contact@example.com</div></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
     <div class="footer-inner">
-      <a class="footer-logo" href="#top">
-        <span class="logo-en">HIROYUKI EBATO</span>
-        <span class="logo-sub">OFFICIAL</span>
+      <a href="#top" class="logo">
+        <span class="name">HIROYUKI EBATO OFFICIAL</span>
       </a>
-      <nav class="footer-links" aria-label="フッターナビ">
-        <a href="#player">PLAYER</a><a href="#career">CAREER</a>
-        <a href="#gallery">GALLERY</a><a href="#support">SUPPORT</a><a href="#contact">CONTACT</a>
+      <nav class="footer-nav">
+        <a href="#player">PLAYER</a>
+        <a href="#career">CAREER</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#support">SUPPORT</a>
+        <a href="#contact">CONTACT</a>
       </nav>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/ebt_gore" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-      </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2026 HIROYUKI EBATO. ALL RIGHTS RESERVED.</p>
-      <a class="totop" href="#top">BACK TO TOP ↑</a>
+      <span>© 2026 HIROYUKI EBATO. ALL RIGHTS RESERVED.</span>
+      <a href="#top">BACK TO TOP ↑</a>
     </div>
   </div>
 </footer>
 
 <script>
-(function(){
-'use strict';
+// ===== Header scroll state =====
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive:true });
 
-/* ===== ハンバーガー（dialog） ===== */
-var burger   = document.getElementById('burger');
-var dialog   = document.getElementById('mobile-nav');
-var closeBtn = document.getElementById('mobile-nav-close');
+// ===== Mobile menu =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}));
 
-function openMenu(){
-  dialog.showModal();
-  burger.setAttribute('aria-expanded','true');
-  burger.setAttribute('aria-label','メニューを閉じる');
-  document.body.classList.add('nav-open');
-  requestAnimationFrame(function(){ dialog.style.opacity='1'; });
+// ===== Theme toggle =====
+const themeToggle = document.getElementById('themeToggle');
+const root = document.documentElement;
+function applyTheme(t){
+  root.setAttribute('data-theme', t);
+  themeToggle.textContent = t === 'light' ? '☀️' : '🌙';
+  localStorage.setItem('ebato-theme', t);
 }
-function closeMenu(){
-  dialog.style.opacity='0';
-  burger.setAttribute('aria-expanded','false');
-  burger.setAttribute('aria-label','メニューを開く');
-  document.body.classList.remove('nav-open');
-  setTimeout(function(){ if(dialog.open) dialog.close(); },230);
-}
-burger.addEventListener('click',function(){ dialog.open?closeMenu():openMenu(); });
-closeBtn.addEventListener('click',closeMenu);
-dialog.addEventListener('cancel',function(e){ e.preventDefault();closeMenu(); });
-var mnLinks=dialog.querySelectorAll('a[href^="#"]');
-for(var i=0;i<mnLinks.length;i++){
-  mnLinks[i].addEventListener('click',function(e){
-    e.preventDefault();
-    var id=this.getAttribute('href').slice(1);
-    closeMenu();
-    setTimeout(function(){
-      var el=document.getElementById(id);
-      if(el){ window.scrollTo({top:el.getBoundingClientRect().top+window.pageYOffset-64,behavior:'smooth'}); }
-    },260);
-  });
-}
-window.addEventListener('resize',function(){ if(window.innerWidth>860&&dialog.open)closeMenu(); });
-
-/* ===== スクロールスパイ ===== */
-var secs=document.querySelectorAll('section[id]');
-var navAs=document.querySelectorAll('.navlinks a');
-function setActive(){
-  var cur='';
-  secs.forEach(function(s){ var r=s.getBoundingClientRect(); if(r.top<=80&&r.bottom>80)cur=s.id; });
-  navAs.forEach(function(a){ if(a.getAttribute('href')==='#'+cur)a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); });
-}
-document.addEventListener('scroll',setActive,{passive:true});
-setActive();
-
-/* ===== フォームタブ ===== */
-var tabBtns=document.querySelectorAll('.tab-btn');
-var pids=['panel-lesson','panel-clinic','panel-sponsor'];
-tabBtns.forEach(function(btn){
-  btn.addEventListener('click',function(){
-    tabBtns.forEach(function(b){ b.classList.remove('is-active'); b.setAttribute('aria-selected','false'); });
-    for(var i=0;i<pids.length;i++){ var p=document.getElementById(pids[i]); if(p)p.classList.remove('is-active'); }
-    btn.classList.add('is-active'); btn.setAttribute('aria-selected','true');
-    var target=document.getElementById(btn.getAttribute('aria-controls'));
-    if(target)target.classList.add('is-active');
-  });
+const savedTheme = localStorage.getItem('ebato-theme');
+const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+applyTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+themeToggle.addEventListener('click', () => {
+  applyTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
 });
 
-/* ===== ギャラリースライダー ===== */
-(function(){
-  var track   = document.getElementById('slider-track');
-  var wrap    = document.getElementById('slider-wrap');
-  var prevBtn = document.getElementById('prev');
-  var nextBtn = document.getElementById('next');
-  var dotsWrap= document.getElementById('dots');
-  var slides  = track.querySelectorAll('.slide');
-  var total   = slides.length;
-  var current = 0;
+// ===== Scrollspy =====
+const navLinks = document.querySelectorAll('[data-nav]');
+const sections = ['player','career','gallery','support','contact'].map(id => document.getElementById(id));
+function updateScrollspy(){
+  let current = '';
+  const pos = window.scrollY + window.innerHeight * 0.35;
+  sections.forEach(sec => {
+    if (sec && pos >= sec.offsetTop) current = sec.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+window.addEventListener('scroll', updateScrollspy, { passive:true });
+updateScrollspy();
 
-  /* 1ページに見えるスライド数 */
-  function perPage(){
-    var w=wrap.offsetWidth;
-    if(w<=500) return 1;
-    if(w<=860) return 2;
-    return 3;
+// ===== Reveal on scroll =====
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.15 });
+revealEls.forEach(el => io.observe(el));
+
+// ===== Gallery slider =====
+const track = document.getElementById('galleryTrack');
+const items = track.children.length;
+const dotsWrap = document.getElementById('galleryDots');
+let perView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 920 ? 2 : 3;
+let index = 0;
+
+function maxIndex(){ return Math.max(0, items - perView); }
+
+function buildDots(){
+  dotsWrap.innerHTML = '';
+  const pages = Math.ceil(items / perView);
+  for(let i=0;i<pages;i++){
+    const b = document.createElement('button');
+    if(i === Math.round(index / perView)) b.classList.add('active');
+    b.addEventListener('click', () => { index = Math.min(i * perView, maxIndex()); update(); });
+    dotsWrap.appendChild(b);
   }
+}
+function update(){
+  const itemWidth = track.children[0].getBoundingClientRect().width;
+  const gap = 16;
+  track.style.transform = `translateX(-${index * (itemWidth + gap)}px)`;
+  const pages = Math.ceil(items / perView);
+  [...dotsWrap.children].forEach((d,i) => d.classList.toggle('active', i === Math.round(index / perView)));
+}
+document.getElementById('galNext').addEventListener('click', () => {
+  index = Math.min(index + perView, maxIndex());
+  update();
+});
+document.getElementById('galPrev').addEventListener('click', () => {
+  index = Math.max(index - perView, 0);
+  update();
+});
 
-  /* ドット生成 */
-  function buildDots(){
-    dotsWrap.innerHTML='';
-    var pp=perPage();
-    var pages=Math.ceil(total/pp);
-    for(var i=0;i<pages;i++){
-      var btn=document.createElement('button');
-      btn.className='dot'+(i===0?' active':'');
-      btn.setAttribute('aria-label',(i+1)+'ページ目');
-      btn.dataset.idx=i;
-      btn.addEventListener('click',function(){ goTo(parseInt(this.dataset.idx)); });
-      dotsWrap.appendChild(btn);
-    }
+// swipe support
+let touchStartX = 0;
+track.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX, {passive:true});
+track.addEventListener('touchend', e => {
+  const diff = touchStartX - e.changedTouches[0].clientX;
+  if (Math.abs(diff) > 40){
+    if (diff > 0) index = Math.min(index + perView, maxIndex());
+    else index = Math.max(index - perView, 0);
+    update();
   }
+}, {passive:true});
 
-  function goTo(idx){
-    var pp=perPage();
-    var pages=Math.ceil(total/pp);
-    current=Math.max(0,Math.min(idx,pages-1));
-    /* スライド幅を動的計算 */
-    var slideW=slides[0].offsetWidth;
-    var gap=pp>1?16:0;
-    track.style.transform='translateX(-'+((slideW+gap)*current*pp)+'px)';
-    /* ドット更新 */
-    var dots=dotsWrap.querySelectorAll('.dot');
-    dots.forEach(function(d,i){ d.classList.toggle('active',i===current); });
-    prevBtn.disabled=(current===0);
-    nextBtn.disabled=(current>=pages-1);
-  }
-
-  prevBtn.addEventListener('click',function(){ goTo(current-1); });
-  nextBtn.addEventListener('click',function(){ goTo(current+1); });
-
-  /* タッチスワイプ */
-  var startX=0;
-  wrap.addEventListener('touchstart',function(e){ startX=e.touches[0].clientX; },{passive:true});
-  wrap.addEventListener('touchend',function(e){
-    var diff=startX-e.changedTouches[0].clientX;
-    if(Math.abs(diff)>40){ diff>0?goTo(current+1):goTo(current-1); }
-  },{passive:true});
-
-  function init(){
+window.addEventListener('resize', () => {
+  const newPerView = window.innerWidth <= 600 ? 1 : window.innerWidth <= 920 ? 2 : 3;
+  if(newPerView !== perView){
+    perView = newPerView;
+    index = 0;
     buildDots();
-    goTo(0);
   }
-  init();
-  window.addEventListener('resize',function(){ buildDots(); goTo(0); });
-})();
+  update();
+});
+buildDots();
+update();
 
-})();
+// ===== Support form tabs =====
+const tabs = document.querySelectorAll('.form-tab');
+const forms = document.querySelectorAll('.app-form');
+const formSuccess = document.getElementById('formSuccess');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    forms.forEach(f => f.style.display = 'none');
+    formSuccess.classList.remove('show');
+    document.querySelector(`.app-form[data-form="${tab.dataset.tab}"]`).style.display = 'block';
+  });
+});
+forms.forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    forms.forEach(f => f.style.display = 'none');
+    formSuccess.classList.add('show');
+  });
+});
 </script>
 </body>
 </html>
